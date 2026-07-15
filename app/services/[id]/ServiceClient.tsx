@@ -200,12 +200,19 @@ const defaultChecklist = [
     },
 ];
 
+type ServiceWithReview = (typeof services)[number] & {
+    reviewText?: string;
+    reviewAuthor?: string;
+};
+
 export default function ServiceDetailPage() {
     const params = useParams();
     const router = useRouter();
     const id = params.id as string;
 
-    const service = services.find((s) => s.id === id);
+    const service = services.find((s) => s.id === id) as
+        | ServiceWithReview
+        | undefined;
 
     if (!service) {
         return (
