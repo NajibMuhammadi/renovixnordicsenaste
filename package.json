@@ -7,7 +7,8 @@
         "build": "next build",
         "start": "next start",
         "lint": "eslint .",
-        "clean": "next clean"
+        "clean": "next clean",
+        "build:cf": "opennextjs-cloudflare build"
     },
     "dependencies": {
         "autoprefixer": "^10.4.21",
@@ -23,6 +24,7 @@
         "tailwind-merge": "^3.5.0"
     },
     "devDependencies": {
+        "@opennextjs/cloudflare": "^1.20.1",
         "@tailwindcss/postcss": "4.1.11",
         "@tailwindcss/typography": "^0.5.19",
         "@types/node": "^20",
@@ -32,6 +34,7 @@
         "eslint-config-next": "16.0.8",
         "firebase-tools": "^15.0.0",
         "tailwindcss": "4.1.11",
-        "typescript": "5.9.3"
+        "typescript": "5.9.3",
+        "wrangler": "^4.86.0"
     }
 }

@@ -1,0 +1,24 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "main": ".open-next/worker.js",
+    "name": "renovixnordic",
+    "compatibility_date": "2026-07-16",
+    "compatibility_flags": ["nodejs_compat"],
+    "assets": {
+        "directory": ".open-next/assets",
+        "binding": "ASSETS",
+    },
+    "vars": {
+        "CONTACT_EMAIL": "info@renovixnordic.se",
+        "RESEND_API_KEY": "re_eBrUSyLL_6MLrTtak3ZHAVR8c4DQ4Ba4C",
+    },
+    "services": [
+        {
+            "binding": "WORKER_SELF_REFERENCE",
+            "service": "renovixnordic",
+        },
+    ],
+    "images": {
+        "binding": "IMAGES",
+    },
+}
