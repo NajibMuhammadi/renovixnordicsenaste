@@ -1,0 +1,6 @@
+{
+  "name": "Renovix Nordic | Flyttstädning & Hemstädning i Gävle",
+  "description": "Renovix Nordic i Gävle erbjuder professionell flyttstädning, hemstädning, kontorsstädning och fönsterputsning. 100% nöjdhetsgaranti och RUT-avdrag.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
