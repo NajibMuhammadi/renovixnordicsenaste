@@ -10,7 +10,6 @@
     },
     "vars": {
         "CONTACT_EMAIL": "info@renovixnordic.se",
-        "RESEND_API_KEY": "re_eBrUSyLL_6MLrTtak3ZHAVR8c4DQ4Ba4C",
     },
     "services": [
         {
