@@ -482,8 +482,7 @@ export default function ServiceDetailPage() {
                                                     </h4>
                                                 </div>
                                                 <p className="text-sm text-slate-500 dark:text-slate-400 font-light leading-relaxed pl-9">
-                                                    {benefitDesc ||
-                                                        "Vi garanterar ett professionellt utfört arbete, personligt bemötande och högsta kvalitet i varje skede."}
+                                                    {benefitDesc}
                                                 </p>
                                             </div>
                                         );
