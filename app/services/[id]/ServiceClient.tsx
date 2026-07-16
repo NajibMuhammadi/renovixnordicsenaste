@@ -264,7 +264,7 @@ export default function ServiceDetailPage() {
                         </Link>
                         <span>/</span>
                         <Link
-                            href="/#tjanster"
+                            href="/tjanster"
                             className="hover:text-[#f59e0b] transition-colors"
                         >
                             Tjänster

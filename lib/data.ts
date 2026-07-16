@@ -436,6 +436,15 @@ import ljusneTwo from "@/public/images/flytt/ljusne/ljusneTwo.jpg";
 import ljusneThree from "@/public/images/flytt/ljusne/ljusneThree.jpg";
 import ljusneFour from "@/public/images/flytt/ljusne/ljusneFour.jpg";
 
+import akutOne from "@/public/images/akut/akutOne.jpg";
+import akutTwo from "@/public/images/akut/akutTwo.jpg";
+import akutThree from "@/public/images/akut/akutThree.jpg";
+import akutFour from "@/public/images/akut/akutFour.jpg";
+import akutFive from "@/public/images/akut/akutFive.jpg";
+import akutSix from "@/public/images/akut/akutSix.jpg";
+import akutSeven from "@/public/images/akut/akutSeven.jpg";
+import akutEight from "@/public/images/akut/akutEight.jpg";
+
 export const portfolioItems = [
     {
         id: "fonsterputsning-gavle-lagenhet",
@@ -471,6 +480,18 @@ export const portfolioItems = [
             "Noggrant utförd flyttstädning av en lägenhet på 120 kvm med fönsterputsning och städgaranti.",
         fullDescription:
             "Vi utförde en komplett flyttstädning av en lägenhet på 120 kvm där samtliga rum rengjordes enligt en noggrann checklista. Kök, badrum, golv, lister, skåp, vitvaror och fönster putsades omsorgsfullt för att lämna bostaden i bästa möjliga skick. Arbetet avslutades med vår städgaranti för kundens trygghet.",
+    },
+    {
+        id: "akutstadning-jouruppdrag",
+        order: 4,
+        title: "Akutstädning – Jouruppdrag",
+        category: "Städning",
+        image: akutOne,
+        location: "Gävleborg",
+        description:
+            "Akut uppdrag där en bostad behövde återställas efter omfattande nedsmutsning. Väggar och övriga ytor rengjordes noggrant med kort varsel för att återställa bostaden till ett rent och fräscht skick.",
+        fullDescription:
+            "Vi ryckte ut med kort varsel till ett akut städuppdrag där bostaden var kraftigt nedsmutsad. Kaffe hade stänkts på väggar och andra ytor, vilket krävde en noggrann rengöring. Efter utfört arbete var bostaden åter ren och fräsch.",
     },
 ];
 
@@ -551,6 +572,44 @@ export const projectGalleries: Record<
                 "Flyttstädning – Rengöring av golv, lister och fönsterbänkar",
         },
     ],
+    "akutstadning-jouruppdrag": [
+        {
+            src: akutOne,
+            caption: "Akutstädning – Före: Kaffefläckar på vägg",
+        },
+        {
+            src: akutTwo,
+            caption: "Akutstädning – Efter: Väggen helt rengjord",
+        },
+        {
+            src: akutThree,
+            caption:
+                "Akutstädning – Före: Kaffefläckar på dörrar och övriga ytor",
+        },
+        {
+            src: akutFour,
+            caption:
+                "Akutstädning – Efter: Noggrann rengöring av dörrar och övriga ytor",
+        },
+        {
+            src: akutFive,
+            caption: "Akutstädning – Före: Kaffefläckar på vägg",
+        },
+        {
+            src: akutSix,
+            caption:
+                "Akutstädning – Efter: Väggen helt rengjord och återställd",
+        },
+        {
+            src: akutSeven,
+            caption: "Akutstädning – Före: Kaffefläckar på dörrkarm och golv",
+        },
+        {
+            src: akutEight,
+            caption:
+                "Akutstädning – Efter: Noggrann rengöring av dörrkarm och golv, återställt till rent skick",
+        },
+    ],
 };
 
 export interface ProjectDetail {
@@ -594,7 +653,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
         scope: "Historisk fastighet med över 40 spröjsade fönsterpartier samt inglasat uterum.",
 
         location: "Gävleborg",
-        completed: "Mars 2026",
+        completed: "Maj 2026",
         guarantee: "100% Nöjd",
         rut: "50% Direkt",
         highlightsTitle: "Resultat & Fördelar",
@@ -604,31 +663,6 @@ export const projectDetails: Record<string, ProjectDetail> = {
             "Säker putsning på hög höjd",
             "Maximalt ljusinsläpp",
         ],
-
-        /*   challengeBadge: "Utmaning & Behov",
-        challengeTitle: "Vad krävdes för uppdraget?",
-        challenge:
-            "Många fönster satt på hög höjd och krävde säkerhetsutrustning samtidigt som de spröjsade glasen krävde extrem precision.",
-
-        solutionBadge: "Vår Lösning",
-        solutionTitle: "Hur gick vi tillväga?",
-        solution:
-            "Våra certifierade fönsterputsare använde professionella ultra-rent-vatten-system och teleskopskaft. Vi putsade både in- och utsida samt torkade av karmar och fönsterbänkar.",
-        standardsTitle: "Vår Standard",
-        standards: [
-            {
-                icon: "award",
-                text: "Utbildad och bakgrundskontrollerad personal",
-            },
-            {
-                icon: "clock",
-                text: "Punktlig ankomst och effektiv tidsplanering",
-            },
-            {
-                icon: "briefcase",
-                text: "Fullt ansvarsförsäkrade upp till 10 mkr",
-            },
-        ], */
     },
     "flyttstadning-soderhamn-120kvm": {
         jobType: "Professionell Flyttstädning",
@@ -678,9 +712,9 @@ export const projectDetails: Record<string, ProjectDetail> = {
         scope: "Komplett flyttstädning av bostad med fokus på noggrann rengöring av samtliga ytor.",
 
         location: "Ljusne",
-        completed: "2026",
+        completed: "Juni 2026",
         guarantee: "Kvalitetssäkrat arbete",
-        rut: "RUT-avdrag",
+        rut: "50% Direkt",
 
         highlightsTitle: "Resultat & Fördelar",
         highlights: [
@@ -714,6 +748,22 @@ export const projectDetails: Record<string, ProjectDetail> = {
                 icon: "shield",
                 text: "Tryggt och professionellt genomförande",
             },
+        ],
+    },
+    "akutstadning-jouruppdrag": {
+        jobType: "Akutstädning",
+        scope: "Akut uppdrag där en bostad behövde återställas efter omfattande nedsmutsning.",
+        location: "Gävle",
+        completed: "Juli 2026",
+        guarantee: "Snabb insats",
+        rut: "50% Direkt",
+
+        highlightsTitle: "Resultat & Fördelar",
+        highlights: [
+            "Snabb utryckning under helgen",
+            "Borttagning av svåra kaffefläckar från väggar",
+            "Grovstädning av golv och ytor",
+            "Rent och fräscht resultat",
         ],
     },
 };

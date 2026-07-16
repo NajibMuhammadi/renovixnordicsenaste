@@ -271,59 +271,73 @@ export default function PortfolioDetailPage() {
                                 </h3>
 
                                 {/* Structured Key Values */}
-                                <div className="grid grid-cols-2 gap-6 pb-6 border-b border-slate-200/60 dark:border-white/5 mb-6">
-                                    <div>
-                                        <div className="flex items-center gap-1.5 text-[10px] uppercase font-bold tracking-widest text-slate-400 dark:text-slate-500 mb-1">
-                                            <MapPin
-                                                size={11}
-                                                className="text-[#f59e0b]"
-                                            />{" "}
-                                            Område
-                                        </div>
-                                        <div className="font-bold text-sm text-[#1e3a5f] dark:text-white">
-                                            Gävleborg
-                                        </div>
-                                    </div>
 
-                                    <div>
-                                        <div className="flex items-center gap-1.5 text-[10px] uppercase font-bold tracking-widest text-slate-400 dark:text-slate-500 mb-1">
-                                            <Calendar
-                                                size={11}
-                                                className="text-[#f59e0b]"
-                                            />{" "}
-                                            Slutfört
-                                        </div>
-                                        <div className="font-bold text-sm text-[#1e3a5f] dark:text-white">
-                                            Mars 2026
-                                        </div>
-                                    </div>
+                                {(details.location ||
+                                    details.completed ||
+                                    details.guarantee ||
+                                    details.rut) && (
+                                    <div className="grid grid-cols-2 gap-6 pb-6 border-b border-slate-200/60 dark:border-white/5 mb-6">
+                                        {details.location && (
+                                            <div>
+                                                <div className="flex items-center gap-1.5 text-[10px] uppercase font-bold tracking-widest text-slate-400 dark:text-slate-500 mb-1">
+                                                    <MapPin
+                                                        size={11}
+                                                        className="text-[#f59e0b]"
+                                                    />{" "}
+                                                    Område
+                                                </div>
+                                                <div className="font-bold text-sm text-[#1e3a5f] dark:text-white">
+                                                    {details.location}
+                                                </div>
+                                            </div>
+                                        )}
 
-                                    <div>
-                                        <div className="flex items-center gap-1.5 text-[10px] uppercase font-bold tracking-widest text-slate-400 dark:text-slate-500 mb-1">
-                                            <Shield
-                                                size={11}
-                                                className="text-[#f59e0b]"
-                                            />{" "}
-                                            Garanti
-                                        </div>
-                                        <div className="font-bold text-sm text-[#1e3a5f] dark:text-white">
-                                            100% Nöjd
-                                        </div>
-                                    </div>
+                                        {details.completed && (
+                                            <div>
+                                                <div className="flex items-center gap-1.5 text-[10px] uppercase font-bold tracking-widest text-slate-400 dark:text-slate-500 mb-1">
+                                                    <Calendar
+                                                        size={11}
+                                                        className="text-[#f59e0b]"
+                                                    />{" "}
+                                                    Slutfört
+                                                </div>
+                                                <div className="font-bold text-sm text-[#1e3a5f] dark:text-white">
+                                                    {details.completed}
+                                                </div>
+                                            </div>
+                                        )}
 
-                                    <div>
-                                        <div className="flex items-center gap-1.5 text-[10px] uppercase font-bold tracking-widest text-slate-400 dark:text-slate-500 mb-1">
-                                            <Percent
-                                                size={11}
-                                                className="text-[#f59e0b]"
-                                            />{" "}
-                                            RUT-avdrag
-                                        </div>
-                                        <div className="font-bold text-sm text-[#1e3a5f] dark:text-white">
-                                            50% Direkt
-                                        </div>
+                                        {details.guarantee && (
+                                            <div>
+                                                <div className="flex items-center gap-1.5 text-[10px] uppercase font-bold tracking-widest text-slate-400 dark:text-slate-500 mb-1">
+                                                    <Shield
+                                                        size={11}
+                                                        className="text-[#f59e0b]"
+                                                    />{" "}
+                                                    Garanti
+                                                </div>
+                                                <div className="font-bold text-sm text-[#1e3a5f] dark:text-white">
+                                                    {details.guarantee}
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        {details.rut && (
+                                            <div>
+                                                <div className="flex items-center gap-1.5 text-[10px] uppercase font-bold tracking-widest text-slate-400 dark:text-slate-500 mb-1">
+                                                    <Percent
+                                                        size={11}
+                                                        className="text-[#f59e0b]"
+                                                    />{" "}
+                                                    RUT-avdrag
+                                                </div>
+                                                <div className="font-bold text-sm text-[#1e3a5f] dark:text-white">
+                                                    {details.rut}
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
-                                </div>
+                                )}
 
                                 {/* Checklist Results */}
                                 <div className="space-y-4">
