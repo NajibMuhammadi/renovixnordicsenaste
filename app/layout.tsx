@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Outfit, Playfair_Display } from "next/font/google";
+import Script from "next/script";
 // @ts-ignore
 import "./globals.css";
 
@@ -107,6 +108,18 @@ export default function RootLayout({
                 className="font-sans antialiased bg-white dark:bg-[#0a111a] transition-colors duration-300"
                 suppressHydrationWarning
             >
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=AW-18137050699"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-ads-tag" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'AW-18137050699');
+                    `}
+                </Script>
                 <ThemeProvider>
                     <QuoteModalProvider>
                         <Header />
