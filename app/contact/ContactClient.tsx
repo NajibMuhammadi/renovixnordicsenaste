@@ -224,6 +224,12 @@ ${formState.message}
                 frequency: "once",
                 message: "",
             });
+
+            if (typeof window !== "undefined" && (window as any).gtag) {
+                (window as any).gtag("event", "conversion", {
+                    send_to: "AW-18137050699/DMGGCNuRztgcEMvctchD",
+                });
+            }
             // OBS: setStep(1) borttagen härifrån.
             // Den gamla raden hoppade tillbaka till steg 1 direkt efter en
             // lyckad sändning, vilket gjorde att success-meddelandet (som bara
