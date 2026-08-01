@@ -160,30 +160,12 @@ export default function ContactPage() {
         setStatus("loading");
         setErrorMsg("");
 
-        const customerTypeSwedish =
-            customerType === "privat" ? "Privatperson" : "Företag";
-        const companyNameVal = formState.companyName
-            ? `\nFöretagsnamn: ${formState.companyName}`
-            : "";
-        const locationVal = formState.location || "Ej angivet";
-        const sizeVal = formState.size ? `${formState.size} kvm` : "Ej angivet";
-
         let frequencyText = "Engångsstädning";
         if (formState.frequency === "weekly") frequencyText = "Varje vecka";
         else if (formState.frequency === "biweekly")
             frequencyText = "Varannan vecka";
         else if (formState.frequency === "monthly")
             frequencyText = "Var fjärde vecka";
-
-        const richMessage = `
-Kundtyp: ${customerTypeSwedish}${companyNameVal}
-Stad/Område: ${locationVal}
-Storlek: ${sizeVal}
-Frekvens: ${frequencyText}
-
-Meddelande:
-${formState.message}
-`.trim();
 
         const formData = new FormData();
         formData.append("name", formState.name);
@@ -195,7 +177,33 @@ ${formState.message}
             ? matchedService.title
             : formState.service;
         formData.append("service", serviceTitle);
-        formData.append("message", richMessage);
+
+        // OBS: Dessa fält saknades tidigare, vilket gjorde att mejlmallen
+        // visade "null" för Stad/Område, Storlek och Frekvens högst upp,
+        // trots att informationen ändå bakades in i meddelandetexten.
+        //
+        // OBS 2: customerType skickas nu som RÅTT värde ("privat"/"foretag"),
+        // inte som redan-översatt svensk text ("Privatperson"/"Företag").
+        // Backend (/api/contact) förväntar sig råvärdet och gör själv om det
+        // till visningstext. Att skicka den svenska texten gjorde att
+        // backendens jämförelse (t.ex. === "foretag") aldrig träffade, så
+        // mejlet visade "Privat" även när användaren valt "Företag".
+        formData.append("customerType", customerType);
+        if (customerType === "foretag") {
+            // OBS 3: Fältnamnet måste vara "company-name" (med bindestreck),
+            // inte "companyName" - det är vad /api/contact/route.ts faktiskt
+            // läser med formData.get("company-name"). Fel fältnamn gjorde att
+            // företagsnamnet aldrig nådde mejlmallen.
+            formData.append("company-name", formState.companyName);
+        }
+        formData.append("location", formState.location);
+        formData.append("size", formState.size);
+        formData.append("frequency", frequencyText);
+
+        // Meddelandefältet innehåller nu ENDAST det kunden själv skrev,
+        // inte längre en duplicerad sammanfattning av kundtyp/stad/storlek/frekvens
+        // (den infon visas redan i sina egna fält ovanför i mejlmallen).
+        formData.append("message", formState.message);
 
         selectedImages.forEach((img) => formData.append("images", img));
 
