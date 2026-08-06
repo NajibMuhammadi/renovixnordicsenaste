@@ -35,9 +35,9 @@ const stats = [
 
 const reviews = [
     {
-        name: "Noggrant & pålitligt arbete",
-        role: "Vårt löfte",
-        text: "Vi ser till att varje uppdrag utförs med högsta kvalitet – inga genvägar, bara resultat du kan lita på.",
+        name: "Jenny Sundkvist",
+        role: "Verifierad kund ",
+        text: "Tillmötesgående och professionell hantering av allt från offert ända till faktura. Jag är mycket nöjd med städningen som var en flyttstädning, och har absolut inget att anmärka på. Jag rekommenderar Renovix Nordic.",
     },
     {
         name: "Flexibel & smidig service",
