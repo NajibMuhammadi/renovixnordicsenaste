@@ -36,13 +36,13 @@ const stats = [
 const reviews = [
     {
         name: "Jenny Sundkvist",
-        role: "Verifierad kund ",
+        role: "Verifierad kund via Google",
         text: "Tillmötesgående och professionell hantering av allt från offert ända till faktura. Jag är mycket nöjd med städningen som var en flyttstädning, och har absolut inget att anmärka på. Jag rekommenderar Renovix Nordic.",
     },
     {
-        name: "Flexibel & smidig service",
-        role: "Vår service",
-        text: "Vi anpassar oss efter din vardag och gör det enkelt att boka, ändra och få hjälp snabbt.",
+        name: "Suqaina Gulam",
+        role: "Verifierad kund via Google",
+        text: "Väldigt nöjd med städningen! Noggrant gjort och bra bemötande. Kommer absolut anlita igen.",
     },
     {
         name: "Trygghet från start till slut",
