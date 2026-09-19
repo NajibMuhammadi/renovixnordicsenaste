@@ -64,16 +64,6 @@ const checklists: Record<string, { category: string; items: string[] }[]> = {
                 "Golv rengörs sist, efter övriga ytor",
             ],
         },
-        {
-            category: "Tvättstuga & Groventré",
-            items: [
-                "Tvättmaskin och tvättmedelsfack rengörs",
-                "Torktumlare och filter rengörs",
-                "Tvättho och förvaringsutrymmen rengörs",
-                "Golvbrunn och ventilationsdon rengörs",
-                "Dörr, karm och handtag torkas av innan golvet rengörs",
-            ],
-        },
     ],
     hemstadning: [
         {
@@ -107,10 +97,6 @@ const checklists: Record<string, { category: string; items: string[] }[]> = {
                 "Avtorkning av handdukstork och hängare",
                 "Fläckborttagning på badrumsmöbler",
             ],
-        },
-        {
-            category: "Tvättstuga & Groventré",
-            items: ["Dammtorkning, dammsugning and våttorkning av fria ytor"],
         },
     ],
     storstadning: [
@@ -146,15 +132,6 @@ const checklists: Record<string, { category: string; items: string[] }[]> = {
                 "Rengöring av golvbrunnar och synliga rör",
                 "Utvändig rengöring av badrumsmöbler",
                 "Rengöring av handfat och toalett, in- och utvändigt",
-            ],
-        },
-        {
-            category: "Tvättstuga & Groventré",
-            items: [
-                "Dammtorkning, dammsugning och våttorkning av fria ytor",
-                "Avtorkning av tvättmaskin och torktumlare, inklusive ovansida",
-                "Rengöring av tvättmedelsfack och torktumlarfilter",
-                "Rengöring av diskbänk, diskho och blandare",
             ],
         },
     ],
@@ -369,10 +346,10 @@ export default function ServiceDetailPage() {
                                         Detta ingår alltid i tjänsten
                                     </h2>
                                     <p className="text-slate-600 dark:text-slate-400 mt-4 font-light text-base leading-relaxed max-w-2xl">
-                                        Vi arbetar med kompromisslös noggrannhet
-                                        enligt en beprövad och certifierad
-                                        checklista. Här ser du precis vad vi
-                                        åtar oss att göra skinande rent.
+                                        Vi arbetar noggrant efter en tydlig och
+                                        genomtänkt checklista för att
+                                        säkerställa att varje del av bostaden
+                                        blir ordentligt rengjord.
                                     </p>
                                 </div>
 
