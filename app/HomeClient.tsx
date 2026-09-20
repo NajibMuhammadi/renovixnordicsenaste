@@ -178,11 +178,7 @@ export default function HomeClient() {
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <div className="grid lg:grid-cols-12 gap-16 items-center">
                         <div className="lg:col-span-7 xl:col-span-7">
-                            <motion.div
-                                initial={{ opacity: 0, x: -30 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.8 }}
-                            >
+                            <div>
                                 <span className="text-[#f59e0b] font-bold uppercase tracking-[0.4em] text-xs mb-6 block">
                                     Kvalitet & Trygghet i Gävleborg
                                 </span>
@@ -218,23 +214,18 @@ export default function HomeClient() {
                                         </a>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         </div>
 
                         <div className="lg:col-span-5 xl:col-span-5">
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 1, delay: 0.2 }}
-                                className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(30,58,95,0.08)] border border-slate-200/50 dark:border-white/5 bg-slate-100 dark:bg-slate-800"
-                            >
+                            <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(30,58,95,0.08)] border border-slate-200/50 dark:border-white/5 bg-slate-100 dark:bg-slate-800">
                                 <BeforeAfterSlider
                                     beforeImage={before.src}
                                     afterImage={after.src}
                                     aspectRatio="aspect-[4/5]"
                                     priority={true}
                                 />
-                            </motion.div>
+                            </div>
                             <div className="mt-8 flex justify-between items-center px-4 gap-4 sm:gap-8">
                                 <div className="text-center flex-1">
                                     <div className="text-2xl sm:text-3xl font-display font-black text-[#1e3a5f] dark:text-white">
