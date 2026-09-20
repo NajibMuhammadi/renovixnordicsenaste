@@ -24,8 +24,8 @@ export default function AboutClient() {
         },
         {
             icon: MapPin,
-            title: "Lokal expertis i Gävle",
-            desc: "Som lokal aktör i Gävleborg har vi korta beslutsvägar och god förståelse för våra kunders behov i regionen.",
+            title: "Service i Gävle",
+            desc: "Vi arbetar i Gävleborg och anpassar tjänsterna efter våra kunders behov.",
         },
     ];
 
@@ -53,8 +53,8 @@ export default function AboutClient() {
                                 Service i Gävleborg.
                             </h1>
                             <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-6 max-w-xl">
-                                Renovix Nordic är en lokal städfirma i Gävle som
-                                kombinerar noggrannhet med personlig service.
+                                Renovix Nordic erbjuder städtjänster i Gävle med
+                                fokus på noggrannhet och personlig service.
                             </p>
                             <p className="text-base text-slate-500 dark:text-slate-500 leading-relaxed mb-8 max-w-xl">
                                 Vi hjälper privatpersoner och företag i hela
@@ -83,7 +83,8 @@ export default function AboutClient() {
                             <div className="absolute bottom-10 left-10 right-10">
                                 <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl">
                                     <p className="text-white text-sm italic font-medium">
-                                        &quot;Vi behandlar ditt hem med samma omtanke som vårt eget.&quot;
+                                        &quot;Vi behandlar ditt hem med samma
+                                        omtanke som vårt eget.&quot;
                                     </p>
                                 </div>
                             </div>
@@ -97,10 +98,22 @@ export default function AboutClient() {
                         className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mt-16 pt-12 border-t border-slate-200/60 dark:border-white/10"
                     >
                         {[
-                            { value: '100%', label: 'Nöjdhetsgaranti på alla uppdrag' },
-                            { value: 'Lokal', label: 'Professionell städfirma i Gävle' },
-                            { value: 'Hela', label: 'Tjänster för hem & företag i Gävleborg' },
-                            { value: '0 kr', label: 'Bindningstid eller dolda avgifter' }
+                            {
+                                value: "100%",
+                                label: "Nöjdhetsgaranti på alla uppdrag",
+                            },
+                            {
+                                value: "Gävle",
+                                label: "Professionell städfirma",
+                            },
+                            {
+                                value: "Hela",
+                                label: "Tjänster för hem & företag i Gävleborg",
+                            },
+                            {
+                                value: "0 kr",
+                                label: "Bindningstid eller dolda avgifter",
+                            },
                         ].map((item, i) => (
                             <div key={i} className="flex flex-col">
                                 <span className="text-4xl sm:text-5xl lg:text-6xl font-display font-black text-[#1e3a5f] dark:text-white leading-none mb-3">
@@ -158,18 +171,16 @@ export default function AboutClient() {
                     <div className="bg-[#1e3a5f] rounded-[3rem] overflow-hidden shadow-[0_15px_40px_rgba(30,58,95,0.12)] flex flex-col lg:flex-row">
                         <div className="lg:w-1/2 p-12 sm:p-20 flex flex-col justify-center">
                             <span className="text-[#f59e0b] font-bold uppercase tracking-[0.4em] text-xs mb-6 block">
-                                Lokalt / Gävle
+                                Gävle / Gävleborg
                             </span>
                             <h2 className="text-4xl sm:text-5xl font-display font-bold text-white mb-8">
-                                Din lokala städfirma i Gävle & Gävleborg
+                                Städning för hem och företag i Gävle
                             </h2>
                             <p className="text-blue-100/70 leading-relaxed mb-10">
-                                Vi är en lokal aktör i Gävle och vill bidra till
-                                renare hem och arbetsplatser i regionen. Genom
-                                att jobba lokalt kan vi erbjuda snabbare
-                                service, flexibla tider och en personlig kontakt
-                                du inte alltid får hos ett stort rikstäckande
-                                bolag.
+                                Vi hjälper till med renare hem och arbetsplatser
+                                i Gävle och Gävleborg. Du får personlig kontakt
+                                från offert till utfört arbete och en lösning
+                                som passar uppdraget.
                             </p>
                             <div className="space-y-4">
                                 {[
@@ -195,7 +206,7 @@ export default function AboutClient() {
                         <div className="lg:w-1/2 relative min-h-[400px]">
                             <Image
                                 src="https://images.pexels.com/photos/4108712/pexels-photo-4108712.jpeg?auto=compress&cs=tinysrgb&w=1000"
-                                alt="Gävle stad - Vi är din lokala städfirma i Gävleborg"
+                                alt="Gävle stad - Städning för hem och företag i Gävleborg"
                                 fill
                                 className="object-cover"
                                 referrerPolicy="no-referrer"

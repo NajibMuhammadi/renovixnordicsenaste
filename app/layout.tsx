@@ -22,26 +22,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
     metadataBase: new URL("https://renovixnordic.se"),
     title: {
-        default:
-            "Renovix Nordic | Flyttstädning, Hemstädning & Kontorsstädning i Gävle",
+        default: "Renovix Nordic | Städning i Gävle och Gävleborg",
         template: "%s | Renovix Nordic",
     },
     description:
         "Renovix Nordic i Gävle erbjuder professionell flyttstädning, hemstädning, kontorsstädning och fönsterputsning i hela Gävleborg. 100% nöjdhetsgaranti.",
-    keywords: [
-        "flyttstädning Gävle",
-        "hemstädning Gävle",
-        "fönsterputsning Gävle",
-        "bortforsling Gävle",
-        "städning Gävle",
-        "Renovix Nordic Gävle",
-        "städservice Gävleborg",
-        "städfirma Gävle",
-        "storstädning Gävle",
-        "kontorsstädning Gävle",
-        "trappstädning Gävleborg",
-        "gräsklippning Gävle",
-    ],
     authors: [{ name: "Renovix Nordic" }],
     creator: "Renovix Nordic",
     publisher: "Renovix Nordic",
@@ -51,7 +36,7 @@ export const metadata: Metadata = {
         telephone: false,
     },
     openGraph: {
-        title: "Renovix Nordic Gävle | Din partner för ett renare hem i Gävleborg",
+        title: "Renovix Nordic | Städning i Gävle och Gävleborg",
         description:
             "Professionell städning och fastighetsskötsel i Gävle med omnejd. 100% nöjdhetsgaranti och RUT-avdrag. Boka din städning idag!",
         url: "https://renovixnordic.se",
@@ -61,7 +46,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Renovix Nordic Gävle | Flyttstädning & Hemstädning",
+        title: "Renovix Nordic | Städning i Gävle och Gävleborg",
         description:
             "Bästa städservicen i Gävleborg. Vi fixar allt från flyttstädning till gräsklippning.",
     },
@@ -76,9 +61,7 @@ export const metadata: Metadata = {
             "max-snippet": -1,
         },
     },
-    alternates: {
-        canonical: "https://renovixnordic.se",
-    },
+    alternates: { canonical: "/" },
 };
 
 export const viewport = {
@@ -110,9 +93,9 @@ export default function RootLayout({
             >
                 <Script
                     src="https://www.googletagmanager.com/gtag/js?id=AW-18137050699"
-                    strategy="afterInteractive"
+                    strategy="lazyOnload"
                 />
-                <Script id="google-ads-tag" strategy="afterInteractive">
+                <Script id="google-ads-tag" strategy="lazyOnload">
                     {`
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
@@ -120,6 +103,28 @@ export default function RootLayout({
                         gtag('config', 'AW-18137050699');
                     `}
                 </Script>
+                <Script
+                    id="local-business-schema"
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "ProfessionalService",
+                            name: "Renovix Nordic",
+                            url: "https://renovixnordic.se",
+                            description:
+                                "Professionell städning och fastighetsskötsel i Gävle och hela Gävleborg.",
+                            areaServed: ["Gävle", "Sandviken", "Gävleborg"],
+                            serviceType: [
+                                "Hemstädning",
+                                "Flyttstädning",
+                                "Storstädning",
+                                "Kontorsstädning",
+                                "Fönsterputsning",
+                            ],
+                        }),
+                    }}
+                />
                 <ThemeProvider>
                     <QuoteModalProvider>
                         <Header />

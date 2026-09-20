@@ -421,7 +421,7 @@ export default function ServiceDetailPage() {
                                 <div className="grid sm:grid-cols-2 gap-x-12 gap-y-8">
                                     {(
                                         service.benefits || [
-                                            "Lokal städfirma med stark förankring i Gävle",
+                                            "Städfirma med service i Gävle",
                                             "100% Nöjd-Kund-Garanti på samtliga uppdrag",
                                             "Miljösmarta rengöringsprodukter för ett sundare hem",
                                             "Fullt försäkrad personal med ansvarsförsäkring",

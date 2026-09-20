@@ -17,7 +17,7 @@ import insideBefore from "@/public/images/putsning/insideBefore.jpg";
 export const services = [
     {
         id: "flyttstadning",
-        title: "Flyttstädning med garanti",
+        title: "Flyttstädning | Med garanti",
         category: "Flyttstädning",
         description:
             "Godkänd vid besiktning – annars kommer vi tillbaka och åtgärdar det, helt kostnadsfritt. Du slipper oroa dig, vi tar hela ansvaret.",
@@ -68,7 +68,7 @@ export const services = [
 
     {
         id: "hemstadning",
-        title: "Hemstädning – Mer tid för livet",
+        title: "Hemstädning | Mer tid för livet",
         category: "Städning",
         description:
             "Varannan vecka, varje vecka eller vid behov – du bestämmer. Samma noggranna städare varje gång, så du alltid vet vad du får.",
@@ -120,7 +120,7 @@ export const services = [
 
     {
         id: "storstadning",
-        title: "Storstädning – En total nystart för ditt hem",
+        title: "Storstädning | En total nystart för ditt hem",
         category: "Städning",
         description:
             "Vi tar allt du inte hinner med – bakom vitvaror, ugn, golvlister. Perfekt inför fest eller en nystart.",
@@ -128,7 +128,7 @@ export const services = [
         image: "https://images.pexels.com/photos/4108712/pexels-photo-4108712.jpeg?auto=compress&cs=tinysrgb&w=800",
         color: "bg-blue-50",
         fullDescription:
-            "När vardagsstädningen inte räcker till är vår storstädning lösningen. Vi går på djupet och rengör ytor som ofta glöms bort. Ge ditt hem den kärlek det förtjänar och upplev känslan av ett helt nytt hem.",
+            "När vardagsstädningen inte räcker till är vår storstädning i Gävle och Gävleborg en praktisk lösning. Vi går på djupet och rengör ytor som ofta glöms bort. Ge ditt hem en ordentlig nystart inför fest, säsongsbyte eller när det behövs.",
         subDescription:
             "Vi rengör bakom vitvaror, inuti ugn och skåp, längs golvlister och i alla hörn som lätt missas i vardagen. Perfekt inför fest, säsongsbyte eller bara när det är dags för en ordentlig nystart.",
         whyChooseTitle: "Varför välja Renovix Nordic för storstädning?",
@@ -170,7 +170,7 @@ export const services = [
 
     {
         id: "fonsterputsning",
-        title: "Professionell Fönsterputs – Kristallklar utsikt",
+        title: "Fönsterputsning | Mer ljus i hemmet",
         category: "Fönsterputs",
         description:
             "Skitiga fönster efter vintern? Vi putsar in- och utsida, ränder och kalkfläckar bort. Eget material, inget du behöver ordna.",
@@ -220,7 +220,7 @@ export const services = [
 
     {
         id: "kontorsstadning",
-        title: "Kontorsstädning – För en produktiv arbetsplats",
+        title: "Kontorsstädning | En trivsam arbetsplats",
         category: "Företag",
         description:
             "Vi städar innan eller efter arbetstid, så det aldrig stör verksamheten. Kök, toaletter, skrivbord och golv – allt enligt ett schema som passar er.",
@@ -271,7 +271,7 @@ export const services = [
 
     {
         id: "trappstadning",
-        title: "Trappstädning – Trivsel för hela fastigheten",
+        title: "Trappstädning | Rent och välkomnande",
         category: "Företag",
         description:
             "Vi städar trapphus, hissar och entréer enligt fast schema. Rent och välkomnande för alla som bor eller arbetar i fastigheten.",
@@ -322,7 +322,7 @@ export const services = [
 
     {
         id: "bortforsling",
-        title: "Bortforsling – vi tar hand om det du inte vill",
+        title: "Bortforsling | Vi tar hand om det tunga",
         category: "Bortforsling",
         description:
             "Vi hämtar möbler, skräp och grovsopor och sorterar allt enligt gällande regler. Du slipper köra till återvinningen själv.",
@@ -372,7 +372,7 @@ export const services = [
 
     {
         id: "grasklippning",
-        title: "Gräsklippning – En perfekt grön matta",
+        title: "Gräsklippning | En välskött trädgård",
         category: "Underhåll",
         description:
             "Vi håller din trädgård i toppskick hela säsongen. Professionell skötsel med öga för detaljer.",

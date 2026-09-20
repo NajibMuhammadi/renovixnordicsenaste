@@ -194,11 +194,11 @@ export default function HomeClient() {
                                     </span>
                                 </h1>
                                 <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed mb-10 max-w-xl">
-                                    Renovix Nordic levererar professionell
-                                    städning för hem, kontor och företag i
-                                    Gävle. Med noggrannhet, pålitlig service och
-                                    ett öga för detaljer ser vi till att varje
-                                    städning håller högsta kvalitet.
+                                    Hos Renovix Nordic får du personlig
+                                    städhjälp i Gävle för hem och arbetsplatser.
+                                    Vi erbjuder bland annat hemstädning,
+                                    flyttstädning, storstädning och
+                                    kontorsstädning.
                                 </p>
 
                                 <div className="flex flex-col gap-6">
@@ -269,7 +269,7 @@ export default function HomeClient() {
             {/* Our Service Section */}
             <section
                 id="services"
-                className="py-20 sm:py-28 lg:py-32 bg-white dark:bg-[#0a111a] transition-colors duration-300"
+                className="deferred-section py-20 sm:py-28 lg:py-32 bg-white dark:bg-[#0a111a] transition-colors duration-300"
             >
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 sm:mb-20 gap-8">
@@ -340,7 +340,7 @@ export default function HomeClient() {
             {/* Vårt Erbjudande Section */}
             <section
                 id="offer"
-                className="py-20 sm:py-28 lg:py-32 bg-slate-50 dark:bg-slate-900/30 transition-colors duration-300"
+                className="deferred-section py-20 sm:py-28 lg:py-32 bg-slate-50 dark:bg-slate-900/30 transition-colors duration-300"
             >
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -419,7 +419,7 @@ export default function HomeClient() {
                                     },
                                     {
                                         icon: Sparkles,
-                                        text: "Lokalt team i Gävleborg, ingen underleverantör",
+                                        text: "Team som arbetar i Gävleborg",
                                     },
                                 ].map((item, i) => (
                                     <div
@@ -443,7 +443,7 @@ export default function HomeClient() {
             {/* Vår Process Section */}
             <section
                 id="process"
-                className="py-20 sm:py-28 lg:py-32 bg-white dark:bg-[#0a111a] transition-colors duration-300"
+                className="deferred-section py-20 sm:py-28 lg:py-32 bg-white dark:bg-[#0a111a] transition-colors duration-300"
             >
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-16 sm:mb-24">
@@ -509,7 +509,7 @@ export default function HomeClient() {
             {/* Subscription Plans Section */}
             <section
                 id="subscriptions"
-                className="py-20 sm:py-28 lg:py-32 bg-slate-50 dark:bg-slate-900/30 transition-colors duration-300"
+                className="deferred-section py-20 sm:py-28 lg:py-32 bg-slate-50 dark:bg-slate-900/30 transition-colors duration-300"
             >
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-16 sm:mb-24">
