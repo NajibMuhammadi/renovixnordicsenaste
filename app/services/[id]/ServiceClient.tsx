@@ -671,7 +671,10 @@ export default function ServiceDetailPage() {
                                         <h4 className="text-xl font-display font-bold text-[#1e3a5f] dark:text-white mb-3">
                                             {otherService.title.split(" – ")[0]}
                                         </h4>
-                                        <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-light leading-relaxed mb-6">
+                                        <p
+                                            data-nosnippet
+                                            className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-light leading-relaxed mb-6"
+                                        >
                                             {otherService.description}
                                         </p>
                                     </div>
