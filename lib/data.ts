@@ -20,404 +20,399 @@ export const services = [
         title: "Flyttstädning | Med garanti",
         category: "Flyttstädning",
         description:
-            "Godkänd vid besiktning – annars kommer vi tillbaka och åtgärdar det, helt kostnadsfritt. Du slipper oroa dig, vi tar hela ansvaret.",
+            "Noggrann flyttstädning enligt vår checklista, med garanti om något behöver åtgärdas efter besiktningen.",
         icon: Truck,
         image: "https://images.pexels.com/photos/4240505/pexels-photo-4240505.jpeg?auto=compress&cs=tinysrgb&w=800",
         color: "bg-blue-50",
         fullDescription:
-            "Slipp flyttstressen och låt proffsen ta hand om städningen. Vi erbjuder marknadens mest noggranna flyttstädning i Gävle och hela Gävleborg, utförd enligt strikt mäklarstandard – alltid med full nöjdhetsgaranti.",
+            "När det är dags att lämna bostaden tar vi hand om flyttstädningen. Vi går igenom hela bostaden enligt en tydlig checklista och lägger extra fokus på kök, badrum, skåp, vitvaror och andra ytor som behöver rengöras inför överlämningen.",
         subDescription:
-            "Vårt team rengör allt från grunden: kök, badrum, bakom vitvaror, element och inuti alla skåp. Vi lämnar inget åt slumpen. Skoulde något mot förmodan inte godkännas vid besiktning, åtgärdar vi det omedelbart utan extra kostnad.",
+            "Vi rengör bland annat kök, badrum, golv, lister, skåp, vitvaror och andra ytor som ingår i flyttstädningen. Om något behöver åtgärdas efter besiktningen återkommer vi enligt vår städgaranti.",
         whyChooseTitle: "Varför välja Renovix Nordic för din flyttstädning?",
         whyChooseDescription:
-            "Vi förstår vikten av en godkänd besiktning. Därför arbetar vi med checklistor som täcker varje hörn av din bostad, kombinerat med lokal expertis och ett genuint engagemang för kvalitet.",
+            "Vi arbetar efter en tydlig checklista och går systematiskt igenom bostaden. Målet är att du ska kunna lämna över bostaden i ett välstädat skick utan att behöva tänka på detaljerna.",
         benefits: [
-            "Gävleborgs ledande experter på flyttstädning",
-            "Fullständig besiktningsgaranti (100%)",
-            "Noggrannhet som tål att granskas",
-            "Miljövänliga rengöringsmetoder",
-            "Ansvarsförsäkring för din trygghet",
-            "Snabba bokningar och fasta priser",
+            "Städning enligt tydlig checklista",
+            "Städgaranti vid behov av åtgärd",
+            "Noggrann rengöring av kök och badrum",
+            "Rengöring av skåp och vitvaror",
+            "Ansvarsförsäkrad verksamhet",
+            "RUT-avdrag när tjänsten är berättigad",
         ],
-        processTitle: "Din väg till en smidig flytt",
+        processTitle: "Så går flyttstädningen till",
         steps: [
             {
                 step: "01",
-                title: "Snabb Offert",
-                desc: "Få ett fast pris direkt baserat på din bostadsyta.",
+                title: "Offert",
+                desc: "Du skickar information om bostaden och får ett pris baserat på uppdragets omfattning.",
             },
             {
                 step: "02",
-                title: "Proffsen anländer",
-                desc: "Vi utför städningen med fokus på varje detalj i checklistan.",
+                title: "Vi städar bostaden",
+                desc: "Vi går igenom bostaden enligt vår checklista och rengör de ytor som ingår.",
             },
             {
                 step: "03",
-                title: "Godkänd Besiktning",
-                desc: "Vi garanterar att städningen godkänns – tryggt och enkelt.",
+                title: "Kontroll och överlämning",
+                desc: "Vi går igenom arbetet innan bostaden lämnas över.",
             },
         ],
-        sidebarTitle: "Redo för en stressfri flytt?",
+        sidebarTitle: "Behöver du flyttstädning?",
         sidebarText:
-            "Låt oss säkra din besiktning. Kontakta oss för en kostnadsfri offert redan idag.",
+            "Skicka information om bostaden så återkommer vi med en offert.",
         /*  reviewText: "", */
-        reviewAuthor: "Nöjd kund i Gävle",
+        reviewAuthor: "",
         footerText:
-            "Trygg flyttstädning med fast pris och garanti i hela Gävleborg.",
+            "Noggrann flyttstädning med städgaranti i Gävle och Gävleborg.",
     },
 
     {
         id: "hemstadning",
-        title: "Hemstädning | Mer tid för livet",
+        title: "Hemstädning | Mer tid i vardagen",
         category: "Städning",
         description:
-            "Varannan vecka, varje vecka eller vid behov – du bestämmer. Samma noggranna städare varje gång, så du alltid vet vad du får.",
+            "Regelbunden hemstädning varje vecka, varannan vecka eller efter behov – anpassat efter ditt hem och din vardag.",
         icon: Home,
         image: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&q=80&w=800",
         color: "bg-slate-50",
         fullDescription:
-            "Unna dig lyxen av ett ständigt rent hem. Med vår hemstädning i Gävle får du en personlig service där vi fokuserar på de detaljer som betyder mest för dig. Vi skapar ordning och reda så att du kan njuta av din fritid fullt ut.",
+            "Med regelbunden hemstädning blir det enklare att hålla hemmet rent utan att behöva lägga tiden själv. Vi anpassar upplägget efter bostaden, hur ofta du vill ha städning och vilka delar av hemmet som är viktigast för dig.",
         subDescription:
-            "Du väljer själv hur ofta vi kommer – varje vecka, varannan vecka eller var fjärde vecka. Samma städare besöker ditt hem varje gång, vilket skapar trygghet och gör att inget missas över tid.",
+            "Du kan boka städning varje vecka, varannan vecka eller efter behov. Vid återkommande städning går vi igenom samma delar av bostaden och kan anpassa arbetet efter dina önskemål.",
         whyChooseTitle: "Varför välja Renovix Nordic för din hemstädning?",
         whyChooseDescription:
-            "Vi tror på personlig service och kontinuitet. Därför får du samma städare vid varje besök – någon som lär känna ditt hem och dina önskemål över tid.",
+            "Vi fokuserar på en enkel och tydlig service där du vet vad som ingår och hur städningen är upplagd. Behoven kan förändras, därför kan upplägget anpassas över tid.",
         benefits: [
-            "Samma städare vid varje besök",
-            "Flexibla intervaller efter din vardag",
-            "Ingen bindningstid – pausa eller avsluta när du vill",
-            "Miljövänliga rengöringsmedel",
-            "Fullt försäkrad städpersonal",
-            "RUT-avdrag direkt på fakturan",
+            "Veckovis eller varannan vecka",
+            "Upplägg anpassat efter ditt hem",
+            "Tydlig omfattning av städningen",
+            "Ansvarsförsäkrad verksamhet",
+            "Eget städmaterial kan ordnas",
+            "RUT-avdrag när tjänsten är berättigad",
         ],
-        processTitle: "Så enkelt kommer du igång",
+        processTitle: "Så kommer du igång",
         steps: [
             {
                 step: "01",
-                title: "Kostnadsfri offert",
-                desc: "Berätta om ditt hem och önskad frekvens, så får du ett fast pris.",
+                title: "Berätta om ditt hem",
+                desc: "Du berättar om bostaden och hur ofta du vill ha städning.",
             },
             {
                 step: "02",
-                title: "Vi planerar ditt schema",
-                desc: "Du väljer dag och tid som passar din vardag bäst.",
+                title: "Vi planerar upplägget",
+                desc: "Vi kommer överens om omfattning, intervall och tid.",
             },
             {
                 step: "03",
-                title: "Njut av ett rent hem",
-                desc: "Samma pålitliga städare kommer och går – utan att du behöver tänka på det.",
+                title: "Regelbunden städning",
+                desc: "Vi tar hand om städningen enligt det upplägg vi kommit överens om.",
             },
         ],
-        sidebarTitle: "Redo för mer tid till det som betyder något?",
+        sidebarTitle: "Vill du slippa tänka på städningen?",
         sidebarText:
-            "Kontakta oss för en skräddarsydd offert på hemstädning i Gävle.",
+            "Kontakta oss så går vi igenom ditt hem och tar fram ett upplägg som passar.",
         /* reviewText:
             "Fantastisk service! Kommer alltid i tid och gör ett grundligt jobb varje gång.", */
-        reviewAuthor: "Nöjd kund i Gävle",
+        reviewAuthor: "",
         footerText:
-            "Regelbunden hemstädning med fast pris och samma städare varje gång.",
+            "Regelbunden hemstädning anpassad efter din vardag i Gävle med omnejd.",
     },
 
     {
         id: "storstadning",
-        title: "Storstädning | En total nystart för ditt hem",
+        title: "Storstädning | När hemmet behöver lite extra",
         category: "Städning",
         description:
-            "Vi tar allt du inte hinner med – bakom vitvaror, ugn, golvlister. Perfekt inför fest eller en nystart.",
+            "En grundligare städning av hemmet med fokus på ytor som ofta inte hinns med i vardagen.",
         icon: Sparkles,
         image: "https://images.pexels.com/photos/4108712/pexels-photo-4108712.jpeg?auto=compress&cs=tinysrgb&w=800",
         color: "bg-blue-50",
         fullDescription:
-            "När vardagsstädningen inte räcker till är vår storstädning i Gävle och Gävleborg en praktisk lösning. Vi går på djupet och rengör ytor som ofta glöms bort. Ge ditt hem en ordentlig nystart inför fest, säsongsbyte eller när det behövs.",
+            "När den vanliga städningen inte räcker till kan en storstädning vara ett bra sätt att gå igenom hemmet mer grundligt. Vi rengör även ytor som ofta hamnar utanför den vanliga städningen.",
         subDescription:
-            "Vi rengör bakom vitvaror, inuti ugn och skåp, längs golvlister och i alla hörn som lätt missas i vardagen. Perfekt inför fest, säsongsbyte eller bara när det är dags för en ordentlig nystart.",
+            "Arbetet kan bland annat omfatta bakom och under vitvaror, golvlister, skåp, ugn och andra ytor beroende på bostadens behov och den omfattning vi kommer överens om.",
         whyChooseTitle: "Varför välja Renovix Nordic för storstädning?",
         whyChooseDescription:
-            "Vi går igenom hela hemmet med en grundlig checklista, inklusive de ytor som ofta glöms bort i vardagen – bakom vitvaror, i skåp och längs golvlister.",
+            "Vi går igenom bostaden mer grundligt än vid vanlig hemstädning och fokuserar på detaljer och ytor som lätt glöms bort.",
         benefits: [
-            "Djupgående rengöring av hela hemmet",
+            "Grundligare rengöring av hemmet",
             "Fokus på ytor som ofta missas",
-            "Perfekt inför fest, flytt eller säsongsbyte",
-            "Fasta priser utan överraskningar",
-            "Ansvarsförsäkrad personal",
-            "RUT-avdrag direkt på fakturan",
+            "Passar inför exempelvis fest eller säsongsbyte",
+            "Tydlig omfattning och pris",
+            "Ansvarsförsäkrad verksamhet",
+            "RUT-avdrag när tjänsten är berättigad",
         ],
         processTitle: "Så går storstädningen till",
         steps: [
             {
                 step: "01",
-                title: "Snabb offert",
-                desc: "Vi ger dig ett fast pris baserat på bostadens storlek och behov.",
+                title: "Offert",
+                desc: "Vi går igenom bostadens storlek och vad du vill ha hjälp med.",
             },
             {
                 step: "02",
-                title: "Grundlig genomgång",
-                desc: "Vi rengör hela hemmet enligt vår detaljerade checklista.",
+                title: "Vi städar grundligt",
+                desc: "Vi arbetar oss igenom bostaden och fokuserar på de ytor som ingår.",
             },
             {
                 step: "03",
-                title: "Ett hem som känns nytt",
-                desc: "Du kommer hem till en total nystart, redo att njutas av.",
+                title: "Slutkontroll",
+                desc: "Vi går igenom resultatet och ser till att arbetet är utfört enligt överenskommelsen.",
             },
         ],
-        sidebarTitle: "Dags för en riktig nystart?",
-        sidebarText: "Boka en storstädning och känn skillnaden i varje rum.",
-        /*  reviewText:
-            "Otroligt resultat! Hemmet kändes helt nytt efteråt, även bakom vitvarorna.", */
-        reviewAuthor: "Nöjd kund i Sandviken",
-        footerText: "Grundlig storstädning med fast pris i hela Gävleborg.",
-    },
-
-    {
-        id: "fonsterputsning",
-        title: "Fönsterputsning | Mer ljus i hemmet",
-        category: "Fönsterputs",
-        description:
-            "Skitiga fönster efter vintern? Vi putsar in- och utsida, ränder och kalkfläckar bort. Eget material, inget du behöver ordna.",
-        icon: Sparkles,
-        image: "https://images.pexels.com/photos/4239145/pexels-photo-4239145.jpeg?auto=compress&cs=tinysrgb&w=800",
-        color: "bg-amber-50",
-        fullDescription:
-            "Låt solen skina in genom perfekt putsade fönster. Vi erbjuder professionell fönsterputs i Gävleborg för både villor och lägenheter. Med rätt teknik och utrustning garanterar vi ett resultat utan ränder eller fläckar.",
-        subDescription:
-            "Vi putsar alla tillgängliga sidor, tar bort hårt sittande smuts, pollen och kalkfläckar samt torkar av karmar och fönsterbleck. Vi tar med allt material – du behöver inte förbereda något.",
-        whyChooseTitle: "Varför välja Renovix Nordic för fönsterputsning?",
-        whyChooseDescription:
-            "Vi använder professionella redskap och teknik för ett ränderfritt resultat, oavsett väder eller fönstertyp. Du behöver inte ordna något själv.",
-        benefits: [
-            "100% ränderfritt resultat garanterat",
-            "In- och utsida ingår alltid",
-            "Eget material och professionell utrustning",
-            "Snabb och effektiv utförande",
-            "Ansvarsförsäkrad personal",
-            "RUT-avdrag direkt på fakturan",
-        ],
-        processTitle: "Så går fönsterputsningen till",
-        steps: [
-            {
-                step: "01",
-                title: "Snabb offert",
-                desc: "Berätta hur många fönster du har, så får du ett fast pris.",
-            },
-            {
-                step: "02",
-                title: "Vi putsar på plats",
-                desc: "Alla sidor rengörs noggrant med professionell utrustning.",
-            },
-            {
-                step: "03",
-                title: "Kristallklart resultat",
-                desc: "Du sitter kvar med ränderfria fönster och mer ljus i hemmet.",
-            },
-        ],
-        sidebarTitle: "Redo för klarare fönster?",
-        sidebarText: "Boka fönsterputsning i Gävleborg redan idag.",
-        /*   reviewText:
-            "Helt ränderfritt och superblankt. Skillnaden var enorm direkt.", */
-        reviewAuthor: "Nöjd kund i Gävle",
-        footerText: "Professionell fönsterputsning med fast pris och garanti.",
+        sidebarTitle: "Behöver hemmet en extra genomgång?",
+        sidebarText:
+            "Kontakta oss så berättar du vad du vill ha hjälp med, så tar vi fram en offert.",
+        reviewAuthor: "",
+        footerText: "Grundlig storstädning för hem i Gävle och Gävleborg.",
     },
 
     {
         id: "kontorsstadning",
-        title: "Kontorsstädning | En trivsam arbetsplats",
+        title: "Kontorsstädning | Anpassad efter er verksamhet",
         category: "Företag",
         description:
-            "Vi städar innan eller efter arbetstid, så det aldrig stör verksamheten. Kök, toaletter, skrivbord och golv – allt enligt ett schema som passar er.",
+            "Regelbunden kontorsstädning som planeras efter era lokaler, arbetstider och behov.",
         icon: Building2,
         image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
         color: "bg-blue-50",
         fullDescription:
-            "En ren arbetsmiljö är nyckeln till framgång. Vi levererar skräddarsydd kontorsstädning i Gävle som möter era höga krav på hygien och estetik. Vi arbetar diskret och effektivt för att skapa en inspirerande miljö för era anställda.",
+            "Ett kontor behöver fungera både för personal och besökare. Vi erbjuder kontorsstädning som kan anpassas efter lokalens storlek, verksamhet och önskad städfrekvens.",
         subDescription:
-            "Vi städar kök, toaletter, skrivbord och golv enligt ett fast schema, utanför er ordinarie arbetstid. Ni får en pålitlig samarbetspartner som ser till att kontoret alltid är representativt.",
+            "Städningen kan exempelvis omfatta kontorsytor, kök, toaletter, golv och andra gemensamma ytor. Vi planerar arbetet tillsammans med er så att det passar verksamhetens arbetstider.",
         whyChooseTitle: "Varför välja Renovix Nordic för kontorsstädning?",
         whyChooseDescription:
-            "Vi anpassar oss efter er verksamhet och städar utanför ordinarie arbetstid, så att era anställda alltid möts av en ren och inspirerande arbetsplats.",
+            "Vi börjar med att gå igenom lokalen och era behov. Därefter tar vi fram ett upplägg med tydlig omfattning och städfrekvens.",
         benefits: [
-            "Städning innan eller efter arbetstid",
-            "Skräddarsytt schema efter er verksamhet",
-            "Diskret och professionellt bemötande",
-            "Fast avtal med tydlig prissättning",
-            "Fullt försäkrad personal",
-            "Samma team vid varje besök",
+            "Städning före eller efter arbetstid",
+            "Upplägg anpassat efter lokalen",
+            "Tydlig omfattning av arbetet",
+            "Regelbunden städning",
+            "Ansvarsförsäkrad verksamhet",
+            "Offert efter genomgång av lokalen",
         ],
         processTitle: "Så kommer ni igång",
         steps: [
             {
                 step: "01",
-                title: "Kostnadsfri genomgång",
-                desc: "Vi besöker er lokal och tar fram ett skräddarsytt förslag.",
+                title: "Genomgång",
+                desc: "Vi går igenom lokalen och vad ni vill ha hjälp med.",
             },
             {
                 step: "02",
-                title: "Fast schema sätts upp",
-                desc: "Vi städar enligt en tid som inte stör er verksamhet.",
+                title: "Upplägg och offert",
+                desc: "Vi föreslår frekvens och omfattning och lämnar en offert.",
             },
             {
                 step: "03",
-                title: "En arbetsplats att vara stolt över",
-                desc: "Rent och representativt, varje dag.",
+                title: "Regelbunden städning",
+                desc: "Vi städar enligt det schema och upplägg vi kommit överens om.",
             },
         ],
-        sidebarTitle: "Vill ni ha en renare arbetsplats?",
-        sidebarText: "Kontakta oss för ett skräddarsytt avtal för ert kontor.",
-        /* reviewText:
-            "Pålitliga och grundliga. Vårt kontor har aldrig känts så fräscht.", */
-        reviewAuthor: "Nöjd företagskund i Gävle",
+        sidebarTitle: "Behöver ni hjälp med kontorsstädningen?",
+        sidebarText:
+            "Kontakta oss så går vi igenom lokalen och tar fram ett upplägg för er verksamhet.",
+        reviewAuthor: "",
         footerText:
-            "Professionell kontorsstädning med fast avtal i hela Gävleborg.",
+            "Kontorsstädning anpassad efter företag i Gävle och Gävleborg.",
     },
-
+    {
+        id: "fonsterputsning",
+        title: "Fönsterputsning | Klara och rena fönster",
+        category: "Fönsterputs",
+        description:
+            "Fönsterputsning för villa och lägenhet. Vi tar med material och rengör tillgängliga fönsterytor.",
+        icon: Sparkles,
+        image: "https://images.pexels.com/photos/4239145/pexels-photo-4239145.jpeg?auto=compress&cs=tinysrgb&w=800",
+        color: "bg-amber-50",
+        fullDescription:
+            "Smutsiga fönster påverkar både utsikten och ljusinsläppet. Vi hjälper till med fönsterputsning för villor och lägenheter och rengör de sidor och delar som ingår i uppdraget.",
+        subDescription:
+            "Vi kan rengöra fönsterglas, karmar och fönsterbleck beroende på uppdragets omfattning. Vi tar med det material och den utrustning som behövs för arbetet.",
+        whyChooseTitle: "Varför välja Renovix Nordic för fönsterputsning?",
+        whyChooseDescription:
+            "Vi arbetar metodiskt med rätt redskap och lägger fokus på detaljer runt glaset, så att fönstren blir rena och fria från synlig smuts.",
+        benefits: [
+            "För villa och lägenhet",
+            "In- och utsida efter överenskommelse",
+            "Vi tar med städmaterial",
+            "Rengöring av karmar och fönsterbleck efter behov",
+            "Ansvarsförsäkrad verksamhet",
+            "RUT-avdrag när tjänsten är berättigad",
+        ],
+        processTitle: "Så går fönsterputsningen till",
+        steps: [
+            {
+                step: "01",
+                title: "Offert",
+                desc: "Berätta hur många fönster du har och hur de ska putsas.",
+            },
+            {
+                step: "02",
+                title: "Vi putsar",
+                desc: "Vi rengör fönstren enligt den omfattning vi kommit överens om.",
+            },
+            {
+                step: "03",
+                title: "Klart",
+                desc: "Vi går igenom arbetet och lämnar rena fönster efter oss.",
+            },
+        ],
+        sidebarTitle: "Behöver du fönsterputsning?",
+        sidebarText:
+            "Skicka gärna antal fönster och information om bostaden så återkommer vi med en offert.",
+        reviewAuthor: "",
+        footerText:
+            "Fönsterputsning för hem och fastigheter i Gävle med omnejd.",
+    },
     {
         id: "trappstadning",
-        title: "Trappstädning | Rent och välkomnande",
+        title: "Trappstädning | Rena gemensamma ytor",
         category: "Företag",
         description:
-            "Vi städar trapphus, hissar och entréer enligt fast schema. Rent och välkomnande för alla som bor eller arbetar i fastigheten.",
+            "Regelbunden städning av trapphus, entréer och andra gemensamma utrymmen enligt ett fast schema.",
         icon: Layers,
         image: "https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=800",
         color: "bg-slate-50",
         fullDescription:
-            "Första intrycket börjar i entrén. Vi hjälper BRF:er och fastighetsägare i Gävleborg å hålla trapphusen skinande rena. En ren miljö minskar slitaget och skapar trygghet för alla som rör sig i byggnaden.",
+            "Vi hjälper bostadsrättsföreningar och fastighetsägare att hålla gemensamma utrymmen rena och välskötta. Städningen planeras efter fastighetens behov och kan utföras enligt ett återkommande schema.",
         subDescription:
-            "Vi städar trapphus, hissar, entréer och tvättstuga enligt ett fast schema som passar er fastighet. Regelbunden skötsel som håller gemensamma utrymmen fräscha året runt.",
+            "Trapphus, entréer, hissar och andra gemensamma ytor kan ingå beroende på fastighetens behov och den omfattning vi kommer överens om.",
         whyChooseTitle: "Varför välja Renovix Nordic för trappstädning?",
         whyChooseDescription:
-            "Vi hjälper BRF:er och fastighetsägare att hålla gemensamma utrymmen rena och välkomnande, enligt ett fast och pålitligt schema.",
+            "Vi erbjuder ett tydligt och återkommande upplägg där städningen anpassas efter fastighetens storlek och användning.",
         benefits: [
-            "Fast schema anpassat efter fastigheten",
-            "Städning av trapphus, hiss och entré",
-            "Minskat slitage och ökad trivsel",
-            "Tydlig prissättning för BRF och fastighetsägare",
-            "Fullt försäkrad personal",
-            "Samma team vid varje besök",
+            "Fast städschema",
+            "Anpassat efter fastighetens behov",
+            "Trapphus, entré och hiss efter överenskommelse",
+            "Tydlig prissättning",
+            "Ansvarsförsäkrad verksamhet",
+            "Regelbunden uppföljning",
         ],
         processTitle: "Så går det till",
         steps: [
             {
                 step: "01",
-                title: "Kostnadsfri offert",
-                desc: "Vi ser över fastighetens behov och ger ett fast pris.",
+                title: "Genomgång av fastigheten",
+                desc: "Vi går igenom vilka ytor som ska städas och hur ofta.",
             },
             {
                 step: "02",
-                title: "Fast städschema",
-                desc: "Vi städar regelbundet enligt överenskommen frekvens.",
+                title: "Offert och schema",
+                desc: "Vi tar fram ett upplägg och en städfrekvens som passar fastigheten.",
             },
             {
                 step: "03",
-                title: "Ett välkomnande trapphus",
-                desc: "Rent och tryggt för alla som bor eller arbetar i fastigheten.",
+                title: "Regelbunden städning",
+                desc: "Vi sköter de gemensamma ytorna enligt överenskommet schema.",
             },
         ],
-        sidebarTitle: "Vill ni ha ett renare trapphus?",
+        sidebarTitle: "Behöver er fastighet trappstädning?",
         sidebarText:
-            "Kontakta oss för en offert på trappstädning för er fastighet.",
-        /*  reviewText:
-            "Alltid rent och fräscht i trapphuset sedan vi bytte till Renovix Nordic.", */
-        reviewAuthor: "BRF-ordförande i Gävle",
-        footerText: "Pålitlig trappstädning med fast schema i hela Gävleborg.",
+            "Kontakta oss för att gå igenom fastigheten och få en offert.",
+        reviewAuthor: "",
+        footerText:
+            "Regelbunden trappstädning för BRF:er och fastighetsägare i Gävleborg.",
     },
 
     {
         id: "bortforsling",
-        title: "Bortforsling | Vi tar hand om det tunga",
+        title: "Bortforsling | Möbler och grovsopor",
         category: "Bortforsling",
         description:
-            "Vi hämtar möbler, skräp och grovsopor och sorterar allt enligt gällande regler. Du slipper köra till återvinningen själv.",
+            "Vi hjälper till med hämtning, lastning och transport av möbler, grovsopor och annat som behöver köras bort.",
         icon: Trash2,
         image: "https://images.pexels.com/photos/761297/pexels-photo-761297.jpeg?auto=compress&cs=tinysrgb&w=800",
         color: "bg-blue-50",
         fullDescription:
-            "Har du samlat på dig saker du inte längre behöver? Vi hjälper dig att rensa ut i Gävle. Vi sköter allt från tunga lyft till transport och korrekt sortering på återvinningscentralen. Enkelt för dig, bra för miljön.",
+            "Har du möbler, grovsopor eller annat som behöver köras bort? Vi hjälper till med hämtning och transport så att du slipper ordna allt själv.",
         subDescription:
-            "Vi hämtar möbler, skräp och grovsopor direkt hos dig, sköter alla tunga lyft och ser till att allt sorteras och lämnas korrekt på återvinningscentralen.",
+            "Vi hämtar det som ska bort, sköter lastningen och transporterar det vidare. Vad som kan hämtas och hur det hanteras beror på material och uppdragets omfattning.",
         whyChooseTitle: "Varför välja Renovix Nordic för bortforsling?",
         whyChooseDescription:
-            "Vi tar hand om de tunga lyften och sköter sorteringen korrekt, så att du slipper både jobbet och oron för miljön.",
+            "Du slipper ordna transport och tunga lyft själv. Vi kommer till platsen och tar hand om det som ska köras bort.",
         benefits: [
-            "Vi hämtar möbler, skräp och grovsopor",
-            "Korrekt sortering och återvinning",
-            "Inga tunga lyft för dig",
-            "Snabb bokning och fasta priser",
-            "Ansvarsförsäkrad personal",
-            "Miljösmart hantering",
+            "Hämtning av möbler och grovsopor",
+            "Tunga lyft och lastning",
+            "Transport till avsedd plats",
+            "Enkel bokning",
+            "Ansvarsförsäkrad verksamhet",
+            "Offert baserad på mängd och avstånd",
         ],
         processTitle: "Så går bortforslingen till",
         steps: [
             {
                 step: "01",
-                title: "Snabb offert",
-                desc: "Berätta vad som ska bort, så får du ett fast pris.",
+                title: "Beskriv vad som ska bort",
+                desc: "Skicka gärna bilder och information om mängden.",
             },
             {
                 step: "02",
-                title: "Vi hämtar och lastar",
-                desc: "Vårt team sköter alla tunga lyft åt dig.",
+                title: "Offert",
+                desc: "Vi bedömer uppdragets omfattning och återkommer med ett pris.",
             },
             {
                 step: "03",
-                title: "Korrekt sortering",
-                desc: "Allt transporteras och sorteras enligt gällande miljöregler.",
+                title: "Hämtning och transport",
+                desc: "Vi hämtar, lastar och transporterar det som ska köras bort.",
             },
         ],
-        sidebarTitle: "Vill du få en yta fri?",
-        sidebarText: "Kontakta oss för en offert på bortforsling i Gävleborg.",
-        /*  reviewText:
-            "Superenkelt och snabbt. De tog hand om allt, jag behövde inte lyfta ett finger.", */
-        reviewAuthor: "Nöjd kund i Gävle",
-        footerText: "Smidig bortforsling med fast pris i hela Gävleborg.",
+        sidebarTitle: "Har du något som behöver köras bort?",
+        sidebarText:
+            "Skicka en beskrivning eller bilder på det som ska hämtas så återkommer vi med en offert.",
+        reviewAuthor: "",
+        footerText:
+            "Smidig bortforsling av möbler och grovsopor i Gävle med omnejd.",
     },
 
     {
         id: "grasklippning",
-        title: "Gräsklippning | En välskött trädgård",
+        title: "Gräsklippning | För en välskött gräsmatta",
         category: "Underhåll",
         description:
-            "Vi håller din trädgård i toppskick hela säsongen. Professionell skötsel med öga för detaljer.",
+            "Regelbunden gräsklippning under säsongen, anpassad efter gräsmattans behov och önskat intervall.",
         icon: Scissors,
         image: "https://images.unsplash.com/photo-1533460004989-cef01064af7e?auto=format&fit=crop&q=80&w=800",
         color: "bg-green-50",
         fullDescription:
-            "Njut av en välskött gräsmatta utan att lyfta ett finger. Vi erbjuder regelbunden gräsklippning i Gävleborg med professionella maskiner som ger ett jämnt och snyggt resultat varje gång.",
+            "Vi hjälper dig att hålla gräsmattan klippt och välskött under säsongen. Du kan boka regelbunden klippning eller hjälp vid enstaka tillfällen beroende på behov.",
         subDescription:
-            "Du väljer intervall under säsongen – varje vecka, varannan vecka eller efter behov. Vi sköter klippning, kantskärning och bortforsling av gräsklipp.",
+            "Vi klipper gräsmattan och kan även hjälpa till med kanter och borttagning av gräsklipp beroende på vad vi kommer överens om.",
         whyChooseTitle: "Varför välja Renovix Nordic för gräsklippning?",
         whyChooseDescription:
-            "Vi håller din trädgård i toppskick hela säsongen med professionella maskiner och ett öga för detaljer, så att du kan njuta av en snygg gräsmatta utan besväret.",
+            "Vi anpassar intervallen efter gräsmattans behov och ser till att arbetet utförs enligt det upplägg vi kommit överens om.",
         benefits: [
-            "Regelbunden klippning hela säsongen",
-            "Professionella maskiner för jämnt resultat",
-            "Kantskärning och bortforsling ingår",
-            "Flexibla intervaller efter dina behov",
-            "Ansvarsförsäkrad personal",
-            "RUT-avdrag direkt på fakturan",
+            "Regelbunden gräsklippning",
+            "Flexibla intervaller",
+            "Klippning efter gräsmattans behov",
+            "Kantskärning efter överenskommelse",
+            "Ansvarsförsäkrad verksamhet",
+            "RUT-avdrag när tjänsten är berättigad",
         ],
         processTitle: "Så går gräsklippningen till",
         steps: [
             {
                 step: "01",
-                title: "Kostnadsfri offert",
-                desc: "Berätta om din gräsmatta och önskat intervall, så får du ett fast pris.",
+                title: "Offert",
+                desc: "Vi bedömer gräsmattans storlek och vilket intervall du behöver.",
             },
             {
                 step: "02",
-                title: "Fast klippschema",
-                desc: "Vi kommer enligt överenskommen frekvens under säsongen.",
+                title: "Vi planerar",
+                desc: "Vi kommer överens om intervall och upplägg under säsongen.",
             },
             {
                 step: "03",
-                title: "En prydlig gräsmatta",
-                desc: "Du njuter av resultatet – vi sköter resten.",
+                title: "Gräsmattan sköts",
+                desc: "Vi kommer enligt överenskommelse och tar hand om klippningen.",
             },
         ],
-        sidebarTitle: "Vill du ha en snyggare gräsmatta?",
-        sidebarText: "Kontakta oss för en offert på gräsklippning i Gävleborg.",
-        /* reviewText:
-            "Jämnt och proffsigt klippt varje gång. Slipper helt tänka på gräsmattan nu.", */
-        reviewAuthor: "Nöjd kund i Gävle",
-        footerText: "Regelbunden gräsklippning med fast pris i hela Gävleborg.",
+        sidebarTitle: "Behöver du hjälp med gräsmattan?",
+        sidebarText:
+            "Kontakta oss för en offert på gräsklippning i Gävle med omnejd.",
+        reviewAuthor: "",
+        footerText:
+            "Gräsklippning och enklare trädgårdsunderhåll i Gävle med omnejd.",
     },
 ];
 
@@ -449,15 +444,15 @@ export const portfolioItems = [
     {
         id: "fonsterputsning-gavle-lagenhet",
         order: 1,
-        title: "Professionell Fönsterputsning",
+        title: "Fönsterputsning i lägenhet",
         category: "Fönsterputsning",
         image: outsideAfter,
         /*  beforeImage: outsideBefore,
         afterImage: insideAfter, */
         description:
-            "Vi utförde en noggrann fönsterputsning där samtliga fönster rengjordes invändigt och utvändigt",
+            "Fönsterputsning av en lägenhet i Gävle, med rengöring av fönster både invändigt och utvändigt.",
         fullDescription:
-            "Vi utförde en noggrann fönsterputsning där samtliga fönster rengjordes invändigt och utvändigt, inklusive karmar och bågar. Med professionella metoder lämnades fönstren helt fria från smuts, ränder och kalkfläckar, vilket gav ett klart och skinande resultat.",
+            "Vi utförde fönsterputsning av en lägenhet i Gävle. Fönstren rengjordes invändigt och utvändigt med fokus på glas, karmar och bågar. Arbetet genomfördes med professionella redskap och avslutades med en kontroll av resultatet.",
     },
     {
         id: "flyttstadning-at-samarbetspartner",
@@ -466,20 +461,20 @@ export const portfolioItems = [
         category: "Flyttstädning",
         image: ljusneOne,
         description:
-            "Genomförd flyttstädning åt en samarbetspartner med fokus på kvalitet, noggrannhet och ett professionellt resultat.",
+            "Flyttstädning i Ljusne med fokus på kök, badrum, golv och övriga ytor inför överlämning.",
         fullDescription:
-            "Vi utförde en komplett flyttstädning åt en samarbetspartner där bostadens samtliga ytor rengjordes enligt överenskomna kvalitetskrav och checklista. Arbetet genomfördes noggrant och effektivt med stort fokus på detaljer för att säkerställa ett professionellt slutresultat.",
+            "Vi utförde en komplett flyttstädning åt en samarbetspartner i Ljusne. Bostaden rengjordes enligt överenskommen omfattning med fokus på kök, badrum, förvaring, golv och andra ytor som behöver vara rena inför en överlämning.",
     },
     {
         id: "flyttstadning-soderhamn-120kvm",
         order: 3,
-        title: "Flyttstädning av lägenhet – 120 kvm i Söderhamn",
+        title: "Flyttstädning av 120 kvm i Söderhamn",
         category: "Flyttstädning",
         image: imageOne,
         description:
-            "Noggrant utförd flyttstädning av en lägenhet på 120 kvm med fönsterputsning och städgaranti.",
+            "Komplett flyttstädning av en bostad på 120 kvm i Söderhamn, inklusive fönsterputsning.",
         fullDescription:
-            "Vi utförde en komplett flyttstädning av en lägenhet på 120 kvm där samtliga rum rengjordes enligt en noggrann checklista. Kök, badrum, golv, lister, skåp, vitvaror och fönster putsades omsorgsfullt för att lämna bostaden i bästa möjliga skick. Arbetet avslutades med vår städgaranti för kundens trygghet.",
+            "Vi utförde en komplett flyttstädning av en bostad på 120 kvm i Söderhamn. Arbetet omfattade bland annat kök, badrum, golv, lister, skåp, vitvaror och fönster. Städningen genomfördes enligt vår checklista och avslutades med en genomgång av bostaden.",
     },
     {
         id: "akutstadning-jouruppdrag",
@@ -489,9 +484,9 @@ export const portfolioItems = [
         image: akutOne,
         location: "Gävleborg",
         description:
-            "Akut uppdrag där en bostad behövde återställas efter omfattande nedsmutsning. Väggar och övriga ytor rengjordes noggrant med kort varsel för att återställa bostaden till ett rent och fräscht skick.",
+            "Akut städuppdrag där en bostad behövde rengöras efter omfattande nedsmutsning.",
         fullDescription:
-            "Vi ryckte ut med kort varsel till ett akut städuppdrag där bostaden var kraftigt nedsmutsad. Kaffe hade stänkts på väggar och andra ytor, vilket krävde en noggrann rengöring. Efter utfört arbete var bostaden åter ren och fräsch.",
+            "Vi fick ett akut städuppdrag med kort varsel där en bostad behövde rengöras efter omfattande nedsmutsning. Bland annat hade kaffe stänkt på väggar och andra ytor. Vi gick igenom de berörda ytorna och rengjorde bostaden så att den åter kunde användas.",
     },
 ];
 
@@ -511,11 +506,11 @@ export const projectGalleries: Record<
         },
         {
             src: insideBefore,
-            caption: "Fönsterputsning – Invändigt Före",
+            caption: "Fönsterputsning – Invändigt före",
         },
         {
             src: insideAfter,
-            caption: "Fönsterputsning – Invändigt Efter",
+            caption: "Fönsterputsning – Invändigt efter",
         },
     ],
     "flyttstadning-soderhamn-120kvm": [
@@ -579,7 +574,7 @@ export const projectGalleries: Record<
         },
         {
             src: akutTwo,
-            caption: "Akutstädning – Efter: Väggen helt rengjord",
+            caption: "Akutstädning – Efter: Väggen rengjord",
         },
         {
             src: akutThree,
@@ -597,8 +592,7 @@ export const projectGalleries: Record<
         },
         {
             src: akutSix,
-            caption:
-                "Akutstädning – Efter: Väggen helt rengjord och återställd",
+            caption: "Akutstädning – Efter: Väggen rengjord och återställd",
         },
         {
             src: akutSeven,
@@ -607,7 +601,7 @@ export const projectGalleries: Record<
         {
             src: akutEight,
             caption:
-                "Akutstädning – Efter: Noggrann rengöring av dörrkarm och golv, återställt till rent skick",
+                "Akutstädning – Efter: Noggrann rengöring av dörrkarm och golv",
         },
     ],
 };
@@ -649,100 +643,99 @@ export interface ProjectDetail {
  */
 export const projectDetails: Record<string, ProjectDetail> = {
     "fonsterputsning-gavle-lagenhet": {
-        jobType: "Professionell Fönsterputsning",
-        scope: "Historisk fastighet med över 40 spröjsade fönsterpartier samt inglasat uterum.",
-
-        location: "Gävleborg",
+        jobType: "Fönsterputsning",
+        scope: "Fönsterputsning av lägenhet med rengöring av fönster invändigt och utvändigt.",
+        location: "Gävle",
         completed: "Maj 2026",
-        guarantee: "100% Nöjd",
-        rut: "50% Direkt",
+        guarantee: "Kvalitetskontroll",
+        rut: "RUT när tjänsten är berättigad",
         highlightsTitle: "Resultat & Fördelar",
         highlights: [
-            "Kristallklart resultat",
-            "Rengjorda bågar och karmar",
-            "Säker putsning på hög höjd",
-            "Maximalt ljusinsläpp",
+            "Rena fönster",
+            "Rengjorda karmar och bågar",
+            "Noggrant arbete på varje fönster",
+            "Bättre sikt genom rena glasytor",
         ],
     },
-    "flyttstadning-soderhamn-120kvm": {
-        jobType: "Professionell Flyttstädning",
-        scope: "Komplett flyttstädning av en villa på 120 kvm inklusive fönsterputsning.",
 
+    "flyttstadning-soderhamn-120kvm": {
+        jobType: "Flyttstädning",
+        scope: "Komplett flyttstädning av en bostad på 120 kvm inklusive fönsterputsning.",
         location: "Söderhamn",
         completed: "Juni 2026",
         guarantee: "Städgaranti",
-        rut: "50 % Direkt",
+        rut: "RUT när tjänsten är berättigad",
 
         highlightsTitle: "Resultat & Fördelar",
         highlights: [
-            "Komplett flyttstädning enligt branschstandard",
-            "Noggrant rengjorda kök, badrum och vitvaror",
-            "Invändig och utvändig fönsterputsning",
-            "Städgaranti för en trygg överlämning",
+            "Flyttstädning enligt tydlig checklista",
+            "Noggrant rengjort kök och badrum",
+            "Rengöring av vitvaror och skåp",
+            "Fönsterputsning ingick i uppdraget",
         ],
 
         challengeBadge: "Utmaning & Behov",
         challengeTitle: "Vad krävdes för uppdraget?",
         challenge:
-            "Inför överlämningen behövde hela bostaden rengöras noggrant. Uppdraget omfattade samtliga rum, kök, badrum, vitvaror, skåp, fönster och andra detaljer som kräver extra omsorg vid en flyttstädning.",
+            "Inför överlämningen behövde hela bostaden rengöras noggrant. Uppdraget omfattade samtliga rum samt kök, badrum, vitvaror, skåp, fönster och andra detaljer som behöver gås igenom vid en flyttstädning.",
 
         solutionBadge: "Vår Lösning",
         solutionTitle: "Hur gick vi tillväga?",
         solution:
-            "Vi följde en strukturerad checklista för flyttstädning och rengjorde bostaden från golv till tak. Samtliga ytor, kök, badrum, vitvaror, skåp och fönster rengjordes noggrant innan en slutlig kvalitetskontroll genomfördes.",
+            "Vi följde en strukturerad checklista och arbetade systematiskt genom hela bostaden. Kök, badrum, vitvaror, skåp, golv, lister och fönster rengjordes innan en slutlig genomgång av arbetet.",
 
         standardsTitle: "Vår Standard",
         standards: [
             {
                 icon: "award",
-                text: "Noggrann städning med fokus på varje detalj",
+                text: "Noggrant arbete med fokus på detaljer",
             },
             {
                 icon: "clock",
-                text: "Punktlig service och effektivt genomförande",
+                text: "Effektivt genomförande enligt överenskommelse",
             },
             {
                 icon: "shield",
-                text: "Städgaranti för en trygg överlämning",
+                text: "Städgaranti för en tryggare överlämning",
             },
         ],
     },
-    "flyttstadning-at-samarbetspartner": {
-        jobType: "Professionell Flyttstädning",
-        scope: "Komplett flyttstädning av bostad med fokus på noggrann rengöring av samtliga ytor.",
 
+    "flyttstadning-at-samarbetspartner": {
+        jobType: "Flyttstädning",
+        scope: "Komplett flyttstädning av bostad med fokus på samtliga ytor.",
         location: "Ljusne",
         completed: "Juni 2026",
         guarantee: "Kvalitetssäkrat arbete",
-        rut: "50% Direkt",
+        rut: "RUT när tjänsten är berättigad",
 
         highlightsTitle: "Resultat & Fördelar",
         highlights: [
-            "Noggrant rengjord bostad inför överlämning",
-            "Rengöring av kök, badrum och övriga ytor",
-            "Detaljfokus på lister, skåp och fönsterbänkar",
-            "Professionellt resultat enligt överenskomna krav",
+            "Noggrant rengjord bostad",
+            "Rengöring av kök och badrum",
+            "Fokus på lister, skåp och andra detaljer",
+            "Arbetet utfördes enligt överenskommen omfattning",
         ],
 
         challengeBadge: "Utmaning & Behov",
         challengeTitle: "Vad krävdes för uppdraget?",
         challenge:
-            "Bostaden behövde lämnas i ett välstädat skick inför nästa steg i flytten. Uppdraget krävde noggrann rengöring av hela bostaden, inklusive kök, badrum, förvaringsutrymmen och andra ytor där smuts lätt samlas.",
+            "Bostaden behövde lämnas i ett välstädat skick inför nästa steg i flytten. Uppdraget omfattade hela bostaden med extra fokus på kök, badrum, förvaring och andra ytor där smuts lätt samlas.",
 
         solutionBadge: "Vår Lösning",
         solutionTitle: "Hur gick vi tillväga?",
         solution:
-            "Vi genomförde flyttstädningen enligt en strukturerad checklista och arbetade systematiskt genom hela bostaden. Samtliga ytor rengjordes noggrant med fokus på detaljer för att säkerställa ett professionellt och godkänt slutresultat.",
+            "Vi arbetade systematiskt genom bostaden enligt en strukturerad checklista. Samtliga överenskomna ytor rengjordes noggrant innan arbetet avslutades med en genomgång.",
 
         standardsTitle: "Vår Standard",
         standards: [
             {
                 icon: "award",
-                text: "Noggrant arbete med fokus på kvalitet och detaljer",
+                text: "Noggrant arbete med fokus på kvalitet",
             },
             {
                 icon: "clock",
-                text: "Effektiv planering och leverans enligt överenskommelse",
+                text: "Effektiv planering och genomförande",
             },
             {
                 icon: "shield",
@@ -752,18 +745,17 @@ export const projectDetails: Record<string, ProjectDetail> = {
     },
     "akutstadning-jouruppdrag": {
         jobType: "Akutstädning",
-        scope: "Akut uppdrag där en bostad behövde återställas efter omfattande nedsmutsning.",
+        scope: "Akut städuppdrag efter omfattande nedsmutsning.",
         location: "Gävle",
         completed: "Juli 2026",
-        guarantee: "Snabb insats",
-        rut: "50% Direkt",
+        guarantee: "Akut insats",
 
         highlightsTitle: "Resultat & Fördelar",
         highlights: [
-            "Snabb utryckning under helgen",
-            "Borttagning av svåra kaffefläckar från väggar",
-            "Grovstädning av golv och ytor",
-            "Rent och fräscht resultat",
+            "Uppdrag med kort varsel",
+            "Rengöring av kaffefläckar på väggar",
+            "Rengöring av dörrar och andra ytor",
+            "Bostaden återställd till ett rent skick",
         ],
     },
 };
@@ -772,6 +764,7 @@ export function getSortedPortfolioItems() {
     return [...portfolioItems].sort((a, b) => {
         const orderA = a.order ?? -Infinity;
         const orderB = b.order ?? -Infinity;
-        return orderB - orderA; // högst order visas först
+
+        return orderB - orderA;
     });
 }
