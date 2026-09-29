@@ -7,12 +7,12 @@ export const metadata: Metadata = {
             "Städfirma i Gävle – Hemstädning & Flyttstädning | Renovix Nordic",
     },
     description:
-        "Behöver du städhjälp i Gävle? Renovix Nordic erbjuder hemstädning, flyttstädning, storstädning och kontorsstädning i Gävle och Gävleborg.",
+        "Renovix Nordic är en städfirma i Gävle som erbjuder hemstädning, flyttstädning, storstädning, fönsterputs och kontorsstädning i Gävle och Gävleborg.",
     alternates: { canonical: "/" },
     openGraph: {
-        title: "Renovix Nordic | Flyttstädning, Hemstädning & Kontorsstädning i Gävle",
+        title: "Städfirma i Gävle – Hemstädning & Flyttstädning | Renovix Nordic",
         description:
-            "Städning för hem och företag i Gävle och Gävleborg. Begär en offert på flyttstädning, hemstädning eller någon av våra andra tjänster.",
+            "Städtjänster för hem och företag i Gävle och Gävleborg. Vi erbjuder bland annat hemstädning, flyttstädning, storstädning och fönsterputs.",
         url: "/",
         siteName: "Renovix Nordic",
         locale: "sv_SE",
