@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Outfit, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 // @ts-ignore
@@ -61,20 +61,37 @@ export const metadata: Metadata = {
             "max-snippet": -1,
         },
     },
-    alternates: { canonical: "/" },
 };
 
-export const viewport = {
+export const viewport: Viewport = {
     themeColor: "#1e3a5f",
     width: "device-width",
     initialScale: 1,
-    maximumScale: 1,
 };
 
 import { QuoteModalProvider } from "@/lib/QuoteModalContext";
 import { ThemeProvider } from "@/lib/ThemeContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Renovix Nordic",
+    url: "https://renovixnordic.se",
+    telephone: "+46760368628",
+    email: "info@renovixnordic.se",
+    description:
+        "Professionell städning och fastighetsskötsel i Gävle och hela Gävleborg.",
+    areaServed: ["Gävle", "Sandviken", "Gävleborg"],
+    serviceType: [
+        "Hemstädning",
+        "Flyttstädning",
+        "Storstädning",
+        "Kontorsstädning",
+        "Fönsterputsning",
+    ],
+};
 
 export default function RootLayout({
     children,
@@ -103,26 +120,10 @@ export default function RootLayout({
                         gtag('config', 'AW-18137050699');
                     `}
                 </Script>
-                <Script
-                    id="local-business-schema"
+                <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "ProfessionalService",
-                            name: "Renovix Nordic",
-                            url: "https://renovixnordic.se",
-                            description:
-                                "Professionell städning och fastighetsskötsel i Gävle och hela Gävleborg.",
-                            areaServed: ["Gävle", "Sandviken", "Gävleborg"],
-                            serviceType: [
-                                "Hemstädning",
-                                "Flyttstädning",
-                                "Storstädning",
-                                "Kontorsstädning",
-                                "Fönsterputsning",
-                            ],
-                        }),
+                        __html: JSON.stringify(localBusinessSchema),
                     }}
                 />
                 <ThemeProvider>

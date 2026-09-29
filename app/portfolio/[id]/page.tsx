@@ -1,10 +1,18 @@
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { portfolioItems } from "@/lib/data";
 import PortfolioDetailClient from "./PortfolioDetailClient";
 
 type Props = {
     params: Promise<{ id: string }>;
 };
+
+// Okända ID:n ger riktig 404 (inte 200 med "hittades inte"-text)
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+    return portfolioItems.map((p) => ({ id: p.id }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { id } = await params;
@@ -30,6 +38,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
 }
 
-export default function Page() {
+export default async function Page({ params }: Props) {
+    const { id } = await params;
+    if (!portfolioItems.some((p) => p.id === id)) notFound();
     return <PortfolioDetailClient />;
 }

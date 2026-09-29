@@ -2,7 +2,10 @@ import { Metadata } from "next";
 import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
-    title: "Städfirma i Gävle | Hemstädning, flyttstädning och kontorsstädning",
+    title: {
+        absolute:
+            "Städfirma i Gävle – Hemstädning & Flyttstädning | Renovix Nordic",
+    },
     description:
         "Behöver du städhjälp i Gävle? Renovix Nordic erbjuder hemstädning, flyttstädning, storstädning och kontorsstädning i Gävle och Gävleborg.",
     alternates: { canonical: "/" },

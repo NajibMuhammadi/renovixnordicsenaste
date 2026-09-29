@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
     Sparkles,
     CheckCircle2,
@@ -609,12 +609,12 @@ export default function HomeClient() {
                                     ))}
                                 </ul>
 
-                                <a
+                                <Link
                                     href="/contact"
                                     className={`w-full py-4 rounded-2xl font-bold text-sm flex items-center justify-center transition-all ${plan.popular ? "bg-[#f59e0b] text-[#1e3a5f] hover:bg-[#1e3a5f] hover:text-white" : "bg-slate-100 dark:bg-white/5 text-[#1e3a5f] dark:text-white hover:bg-[#1e3a5f] hover:text-white"}`}
                                 >
                                     {plan.cta}
-                                </a>
+                                </Link>
                             </motion.div>
                         ))}
                     </div>
@@ -765,24 +765,22 @@ export default function HomeClient() {
                                         className={`text-[#f59e0b] transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`}
                                     />
                                 </button>
-                                <AnimatePresence>
-                                    {openFaq === i && (
-                                        <motion.div
-                                            id={`faq-answer-${i}`}
-                                            initial={{ height: 0, opacity: 0 }}
-                                            animate={{
-                                                height: "auto",
-                                                opacity: 1,
-                                            }}
-                                            exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.3 }}
-                                        >
-                                            <div className="px-8 pb-8 text-slate-600 dark:text-slate-400 leading-relaxed">
-                                                {faq.answer}
-                                            </div>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
+                                {/* Svaret renderas alltid (finns i HTML:en för Google) och döljs med höjd 0 */}
+                                <motion.div
+                                    id={`faq-answer-${i}`}
+                                    aria-hidden={openFaq !== i}
+                                    initial={false}
+                                    animate={{
+                                        height: openFaq === i ? "auto" : 0,
+                                        opacity: openFaq === i ? 1 : 0,
+                                    }}
+                                    transition={{ duration: 0.3 }}
+                                    className="overflow-hidden"
+                                >
+                                    <div className="px-8 pb-8 text-slate-600 dark:text-slate-400 leading-relaxed">
+                                        {faq.answer}
+                                    </div>
+                                </motion.div>
                             </motion.div>
                         ))}
                     </div>

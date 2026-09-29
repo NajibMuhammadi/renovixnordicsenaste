@@ -1,10 +1,18 @@
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { services } from "@/lib/data";
 import ServiceDetailPage from "./ServiceClient";
 
 type Props = {
     params: Promise<{ id: string }>;
 };
+
+// Okända ID:n ger riktig 404 (inte 200 med "hittades inte"-text)
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+    return services.map((s) => ({ id: s.id }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { id } = await params;
@@ -32,6 +40,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
 }
 
-export default function Page() {
+export default async function Page({ params }: Props) {
+    const { id } = await params;
+    if (!services.some((s) => s.id === id)) notFound();
     return <ServiceDetailPage />;
 }
