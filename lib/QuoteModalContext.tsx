@@ -1,36 +1,40 @@
-'use client';
+"use client";
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { useRouter } from 'next/navigation';
+import React, { createContext, useContext, useState, ReactNode } from "react";
+import { useRouter } from "next/navigation";
 
 interface QuoteModalContextType {
-  isOpen: boolean;
-  openModal: () => void;
-  closeModal: () => void;
+    isOpen: boolean;
+    openModal: () => void;
+    closeModal: () => void;
 }
 
-const QuoteModalContext = createContext<QuoteModalContextType | undefined>(undefined);
+const QuoteModalContext = createContext<QuoteModalContextType | undefined>(
+    undefined,
+);
 
 export function QuoteModalProvider({ children }: { children: ReactNode }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
+    const [isOpen, setIsOpen] = useState(false);
+    const router = useRouter();
 
-  const openModal = () => {
-    router.push('/contact');
-  };
-  const closeModal = () => setIsOpen(false);
+    const openModal = () => {
+        router.push("/priser");
+    };
+    const closeModal = () => setIsOpen(false);
 
-  return (
-    <QuoteModalContext.Provider value={{ isOpen, openModal, closeModal }}>
-      {children}
-    </QuoteModalContext.Provider>
-  );
+    return (
+        <QuoteModalContext.Provider value={{ isOpen, openModal, closeModal }}>
+            {children}
+        </QuoteModalContext.Provider>
+    );
 }
 
 export function useQuoteModal() {
-  const context = useContext(QuoteModalContext);
-  if (context === undefined) {
-    throw new Error('useQuoteModal must be used within a QuoteModalProvider');
-  }
-  return context;
+    const context = useContext(QuoteModalContext);
+    if (context === undefined) {
+        throw new Error(
+            "useQuoteModal must be used within a QuoteModalProvider",
+        );
+    }
+    return context;
 }

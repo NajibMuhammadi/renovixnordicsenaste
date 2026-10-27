@@ -577,6 +577,12 @@ export default function ServiceDetailPage() {
                                 >
                                     Begär gratis offert
                                 </Link>
+                                <Link
+                                    href="/priser"
+                                    className="w-full border border-slate-200 dark:border-white/10 hover:border-[#f59e0b] bg-white dark:bg-slate-900/40 text-slate-700 dark:text-slate-200 font-bold text-xs py-3 rounded-xl transition-all block text-center"
+                                >
+                                    Se priser &amp; prislista →
+                                </Link>
                             </div>
 
                             {/* Exact matching beautiful Review card */}

@@ -24,14 +24,6 @@ const Footer = () => {
                         <ul className="space-y-4 text-sm text-slate-500 dark:text-slate-400">
                             <li>
                                 <Link
-                                    href="/om-oss"
-                                    className="hover:text-[#f59e0b] transition-colors"
-                                >
-                                    Om Oss
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
                                     href="/portfolio"
                                     className="hover:text-[#f59e0b] transition-colors"
                                 >
@@ -50,7 +42,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <h2 className="font-bold text-[#1e3a5f] dark:text-white mb-6">
-                            Tjänster
+                            Tjänster & Priser
                         </h2>
                         <ul className="space-y-4 text-sm text-slate-500 dark:text-slate-400">
                             <li>
@@ -58,7 +50,15 @@ const Footer = () => {
                                     href="/tjanster"
                                     className="hover:text-[#f59e0b] transition-colors"
                                 >
-                                    Städning
+                                    Alla tjänster
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/priser"
+                                    className="hover:text-[#f59e0b] transition-colors"
+                                >
+                                    Priser & RUT-avdrag
                                 </Link>
                             </li>
                             <li>
@@ -66,15 +66,7 @@ const Footer = () => {
                                     href="/tjanster"
                                     className="hover:text-[#f59e0b] transition-colors"
                                 >
-                                    Underhåll
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/tjanster"
-                                    className="hover:text-[#f59e0b] transition-colors"
-                                >
-                                    Företag
+                                    Företagstädning
                                 </Link>
                             </li>
                         </ul>
@@ -124,14 +116,25 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="flex gap-8">
-                        {["Instagram", "LinkedIn", "Twitter"].map((social) => (
+                        {[
+                            {
+                                name: "Instagram",
+                                href: "https://www.instagram.com/renovixnordic",
+                            },
+                            {
+                                name: "Facebook",
+                                href: "https://www.facebook.com/1101739859679132?ref=PROFILE_EDIT_xav_ig_profile_page_web",
+                            },
+                        ].map((social) => (
                             <a
-                                key={social}
-                                href="#"
+                                key={social.name}
+                                href={social.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 hover:text-[#1e3a5f] dark:hover:text-white transition-colors"
-                                aria-label={`Följ oss på ${social}`}
+                                aria-label={`Följ oss på ${social.name}`}
                             >
-                                {social}
+                                {social.name}
                             </a>
                         ))}
                     </div>

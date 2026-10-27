@@ -45,75 +45,32 @@ const reviews = [
         text: "Väldigt nöjd med städningen! Noggrant gjort och bra bemötande. Kommer absolut anlita igen.",
     },
     {
-        name: "Trygghet från start till slut",
-        role: "Din trygghet",
-        text: "Med garanti, försäkring och tydlig kommunikation kan du känna dig helt trygg med oss.",
+        name: "Shoaib Mansouri",
+        role: "Verifierad kund via Google",
+        text: "",
     },
 ];
 
 const faqs = [
     {
-        question: "Erbjuder ni garanti på flyttstädning?",
-        answer: "Ja, vi erbjuder alltid 100% nöjdhetsgaranti. Om något inte skulle bli godkänt vid besiktning åtgärdar vi det snabbt – utan extra kostnad.",
+        question: "Vad ingår i en flyttstädning?",
+        answer: "Vi utför en grundlig flyttstädning av bostadens kök, badrum, rum och övriga utrymmen enligt överenskommen omfattning. Kontakta oss om du har frågor om vad som ingår i din flyttstädning.",
     },
     {
-        question: "Hur fungerar RUT-avdraget?",
-        answer: "RUT-avdraget dras direkt på fakturan, så du betalar bara 50% av arbetskostnaden. Vi sköter allt med Skatteverket – enkelt och smidigt för dig.",
+        question: "Har ni garanti på flyttstädning i Gävle?",
+        answer: "Ja, Renovix Nordic erbjuder garanti på flyttstädning enligt våra garantivillkor. Om något behöver åtgärdas efter besiktningen hjälper vi dig utan extra kostnad enligt villkoren.",
     },
     {
-        question: "Vilka områden täcker ni?",
-        answer: "Vi utför städtjänster i Gävle och hela Gävleborg. Kontakta oss så bekräftar vi snabbt om vi täcker ditt område.",
+        question: "Vad är skillnaden mellan storstädning och hemstädning?",
+        answer: "Hemstädning passar för att hålla hemmet rent i vardagen, medan storstädning innebär en mer grundlig rengöring av bostaden. Vilket alternativ som passar bäst beror på hur rent du vill ha och vilka delar av hemmet som behöver extra omsorg.",
     },
     {
-        question: "Är ni fullt försäkrade?",
-        answer: "Ja, vi är fullt försäkrade. Du kan känna dig trygg med att ditt hem och dina tillhörigheter är skyddade under hela uppdraget.",
+        question: "Behöver jag ordna städmaterial själv?",
+        answer: "Nej, vi tar med den utrustning och det städmaterial som behövs för uppdraget. Om du föredrar att vi använder dina egna städdukar kan vi komma överens om det inför städningen.",
     },
     {
-        question: "Behöver jag tillhandahålla städmaterial?",
-        answer: "Nej, vi tar med all nödvändig utrustning för att utföra städningen professionellt. För att säkerställa bästa hygien använder vi separata städdukar för varje hem, så att bakterier inte sprids mellan kunder. Du kan välja att köpa egna dukar av oss som endast används i ditt hem. Om du istället vill att vi hanterar tvätt av dukarna åt dig tillkommer en mindre avgift. Vi går alltid igenom detta med dig innan start – inga överraskningar.",
-    },
-];
-
-const subscriptionPlans = [
-    {
-        title: "Varje Vecka",
-        description:
-            "För dig som vill ha ett ständigt skinande rent hem utan att lyfta ett finger.",
-        features: [
-            "Samma städare varje gång",
-            "Prioriterad support",
-            "Ingen bindningstid",
-            "RUT-avdrag direkt",
-        ],
-        cta: "Begär Offert",
-        icon: Heart,
-    },
-    {
-        title: "Varannan Vecka",
-        description:
-            "Vår populäraste plan. Håller ordningen uppe och ger dig en fräsch start var fjortonde dag.",
-        features: [
-            "Flexibla tider",
-            "Kvalitetsgaranti",
-            "Anpassat städschema",
-            "RUT-avdrag direkt",
-        ],
-        cta: "Begär Offert",
-        popular: true,
-        icon: Calendar,
-    },
-    {
-        title: "Var Fjärde Vecka",
-        description:
-            "Perfekt för dig som vill ha en rejäl genomgång av hemmet en gång i månaden.",
-        features: [
-            "Grundlig rengöring",
-            "Trygg försäkring",
-            "Enkel bokning",
-            "RUT-avdrag direkt",
-        ],
-        cta: "Begär Offert",
-        icon: Gift,
+        question: "Hur bokar jag städning hos Renovix Nordic?",
+        answer: "Kontakta oss och berätta vilken städtjänst du behöver, bostadens storlek och när du vill ha städningen utförd. Vi hjälper dig vidare med en offert och planering av uppdraget.",
     },
 ];
 
@@ -130,11 +87,12 @@ export default function HomeClient() {
             if (window.innerWidth >= 1024) cards = 3;
             else if (window.innerWidth >= 768) cards = 2;
 
-            setVisibleCards(cards);
+            const reviewCards = Math.min(cards, reviews.length);
+            setVisibleCards(reviewCards);
 
             // Update current review index if it's out of bounds for the new card count
             setCurrentReview((prev) => {
-                const maxIndex = reviews.length - cards;
+                const maxIndex = reviews.length - reviewCards;
                 return Math.min(prev, Math.max(0, maxIndex));
             });
         };
@@ -144,17 +102,13 @@ export default function HomeClient() {
     }, []);
 
     const nextReview = () => {
-        setCurrentReview(
-            (prev) => (prev + 1) % (reviews.length - visibleCards + 1),
-        );
+        const pageCount = Math.max(1, reviews.length - visibleCards + 1);
+        setCurrentReview((prev) => (prev + 1) % pageCount);
     };
 
     const prevReview = () => {
-        setCurrentReview(
-            (prev) =>
-                (prev - 1 + (reviews.length - visibleCards + 1)) %
-                (reviews.length - visibleCards + 1),
-        );
+        const pageCount = Math.max(1, reviews.length - visibleCards + 1);
+        setCurrentReview((prev) => (prev - 1 + pageCount) % pageCount);
     };
 
     const portfolioCategories = [
@@ -207,7 +161,7 @@ export default function HomeClient() {
                                             onClick={openModal}
                                             className="bg-[#1e3a5f] dark:bg-[#f59e0b] text-white dark:text-[#1e3a5f] px-6 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:scale-[1.02] hover:bg-[#152a45] dark:hover:bg-[#d97706] transition-all duration-300 shadow-md shadow-blue-900/5 cursor-pointer outline-none shrink-0"
                                         >
-                                            Begär offert – snabbt svar{" "}
+                                            Få prisförslag direkt
                                             <ArrowUpRight size={16} />
                                         </button>
                                         <a
@@ -530,6 +484,7 @@ export default function HomeClient() {
                         {[
                             {
                                 title: "Veckovis städning",
+                                price: "229 kr/timme",
                                 description:
                                     "För dig som vill ha ett hem som alltid känns nystädat",
                                 features: [
@@ -538,11 +493,13 @@ export default function HomeClient() {
                                     "Prioriterad bokning vid ändringar",
                                     "RUT-avdrag direkt på fakturan",
                                 ],
-                                cta: "Begär offert",
+                                cta: "Boka veckostädning",
+                                href: "/contact?service=hemstadning&frequency=weekly",
                                 icon: Heart,
                             },
                             {
                                 title: "Varannan vecka",
+                                price: "249 kr/timme",
                                 description:
                                     "Bästa balansen mellan pris och ett rent hem.",
                                 features: [
@@ -551,12 +508,14 @@ export default function HomeClient() {
                                     "Justera eller pausa vid behov",
                                     "RUT-avdrag direkt på fakturan",
                                 ],
-                                cta: "Begär offert",
+                                cta: "Boka varannan vecka",
                                 popular: true,
+                                href: "/contact?service=hemstadning&frequency=biweekly",
                                 icon: Calendar,
                             },
                             {
                                 title: "Var fjärde vecka",
+                                price: "269 kr/timme",
                                 description:
                                     "En regelbunden uppfräschning utan bindningstid.",
                                 features: [
@@ -565,7 +524,8 @@ export default function HomeClient() {
                                     "Boka & hantera enkelt online",
                                     "RUT-avdrag direkt",
                                 ],
-                                cta: "Begär offert",
+                                cta: "Boka var fjärde vecka",
+                                href: "/contact?service=hemstadning&frequency=monthly",
                                 icon: Gift,
                             },
                         ].map((plan, i) => (
@@ -582,41 +542,63 @@ export default function HomeClient() {
                                         Mest vald
                                     </div>
                                 )}
-                                <div
-                                    className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 ${plan.popular ? "bg-[#f59e0b] text-[#1e3a5f]" : "bg-[#1e3a5f] text-white"}`}
-                                >
-                                    <plan.icon size={28} />
-                                </div>
-                                <h3 className="text-2xl font-display font-bold text-[#1e3a5f] dark:text-white mb-4">
-                                    {plan.title}
-                                </h3>
-                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-8">
-                                    {plan.description}
-                                </p>
+                                <div>
+                                    <div
+                                        className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 ${plan.popular ? "bg-[#f59e0b] text-[#1e3a5f]" : "bg-[#1e3a5f] text-white"}`}
+                                    >
+                                        <plan.icon size={28} />
+                                    </div>
+                                    <h3 className="text-2xl font-display font-bold text-[#1e3a5f] dark:text-white mb-2">
+                                        {plan.title}
+                                    </h3>
+                                    <div className="mb-4">
+                                        <span className="text-2xl font-black text-[#1e3a5f] dark:text-[#f59e0b] tabular-nums">
+                                            {plan.price}
+                                        </span>
+                                        <span className="text-xs text-slate-400 block">
+                                            efter RUT-avdrag
+                                        </span>
+                                    </div>
+                                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-8">
+                                        {plan.description}
+                                    </p>
 
-                                <ul className="space-y-4 mb-10">
-                                    {plan.features.map((feature, j) => (
-                                        <li
-                                            key={j}
-                                            className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"
-                                        >
-                                            <CheckCircle2
-                                                size={16}
-                                                className="text-[#f59e0b] shrink-0"
-                                            />
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
+                                    <ul className="space-y-4 mb-10">
+                                        {plan.features.map((feature, j) => (
+                                            <li
+                                                key={j}
+                                                className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300"
+                                            >
+                                                <CheckCircle2
+                                                    size={16}
+                                                    className="text-[#f59e0b] shrink-0"
+                                                />
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
 
                                 <Link
-                                    href="/contact"
+                                    href={plan.href}
                                     className={`w-full py-4 rounded-2xl font-bold text-sm flex items-center justify-center transition-all ${plan.popular ? "bg-[#f59e0b] text-[#1e3a5f] hover:bg-[#1e3a5f] hover:text-white" : "bg-slate-100 dark:bg-white/5 text-[#1e3a5f] dark:text-white hover:bg-[#1e3a5f] hover:text-white"}`}
                                 >
                                     {plan.cta}
                                 </Link>
                             </motion.div>
                         ))}
+                    </div>
+                    <div className="mt-12 text-center">
+                        <Link
+                            href="/priser"
+                            className="inline-flex items-center gap-2 text-sm font-bold text-[#1e3a5f] dark:text-[#f59e0b] hover:underline"
+                        >
+                            <span>
+                                Vill du se alla priser för flytt-, stor- och
+                                fönsterputsning? Se hela prislistan
+                            </span>
+                            <ChevronRight size={16} />
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -669,7 +651,7 @@ export default function HomeClient() {
                             {reviews.map((review, i) => (
                                 <div
                                     key={i}
-                                    className="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-21.333px)] bg-slate-50 dark:bg-slate-900/50 p-8 sm:p-10 rounded-[2.5rem] shadow-[0_10px_30px_rgba(30,58,95,0.02)] hover:shadow-[0_20px_40px_rgba(30,58,95,0.05)] transition-all border border-slate-100 dark:border-white/5 flex flex-col"
+                                    className={`min-w-full md:min-w-[calc(50%-12px)] ${visibleCards === 2 ? "lg:min-w-[calc(50%-16px)]" : "lg:min-w-[calc(33.333%-21.333px)]"} bg-slate-50 dark:bg-slate-900/50 p-8 sm:p-10 rounded-[2.5rem] shadow-[0_10px_30px_rgba(30,58,95,0.02)] hover:shadow-[0_20px_40px_rgba(30,58,95,0.05)] transition-all border border-slate-100 dark:border-white/5 flex flex-col`}
                                 >
                                     <div className="flex gap-1 text-[#f59e0b] mb-6">
                                         {[...Array(5)].map((_, i) => (
@@ -680,9 +662,11 @@ export default function HomeClient() {
                                             />
                                         ))}
                                     </div>
-                                    <p className="text-slate-700 dark:text-slate-400 italic mb-8 leading-relaxed text-sm sm:text-base flex-grow">
-                                        &quot;{review.text}&quot;
-                                    </p>
+                                    {review.text.trim() && (
+                                        <p className="text-slate-700 dark:text-slate-400 italic mb-8 leading-relaxed text-sm sm:text-base flex-grow">
+                                            &quot;{review.text}&quot;
+                                        </p>
+                                    )}
                                     <div className="flex items-center gap-4 mt-auto">
                                         {/* <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden relative">
                                             <Image
