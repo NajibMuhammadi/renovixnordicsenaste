@@ -33,7 +33,6 @@ const nextConfig: NextConfig = {
             },
         ],
     },
-    output: "standalone",
     transpilePackages: ["framer-motion", "motion"],
     turbopack: {},
 };

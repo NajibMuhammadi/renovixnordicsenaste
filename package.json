@@ -24,7 +24,7 @@
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^1.20.1",
+    "@opennextjs/cloudflare": "^1.20.13",
     "@tailwindcss/postcss": "4.1.11",
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^20",
@@ -35,7 +35,7 @@
     "firebase-tools": "^15.0.0",
     "tailwindcss": "4.1.11",
     "typescript": "5.9.3",
-    "wrangler": "^4.86.0"
+    "wrangler": "^4.154.0"
   },
   "overrides": {
     "@types/react": "19.3.0",
