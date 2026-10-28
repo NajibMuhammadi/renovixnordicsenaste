@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useId } from "react";
+import React, { useState, useId, useRef, useEffect } from "react";
 import Link from "next/link";
 import {
     Check,
@@ -15,6 +15,8 @@ import {
     Home,
     Truck,
     Layers,
+    ChevronLeft,
+    ChevronRight,
 } from "lucide-react";
 
 interface FlyttTier {
@@ -267,6 +269,32 @@ export default function PrislistaClient() {
         "all" | "flytt" | "hem" | "stor" | "fonster" | "kontor"
     >("all");
 
+    // Visar pilar + toning när kategori-menyn går att scrolla i sidled
+    const navRef = useRef<HTMLDivElement>(null);
+    const [navScroll, setNavScroll] = useState({ left: false, right: false });
+
+    const updateNavScroll = () => {
+        const el = navRef.current;
+        if (!el) return;
+        setNavScroll({
+            left: el.scrollLeft > 4,
+            right: el.scrollLeft + el.clientWidth < el.scrollWidth - 4,
+        });
+    };
+
+    const scrollNav = (direction: 1 | -1) => {
+        navRef.current?.scrollBy({
+            left: direction * 200,
+            behavior: "smooth",
+        });
+    };
+
+    useEffect(() => {
+        updateNavScroll();
+        window.addEventListener("resize", updateNavScroll);
+        return () => window.removeEventListener("resize", updateNavScroll);
+    }, []);
+
     const handleSelectCategory = (
         cat: "all" | "flytt" | "hem" | "stor" | "fonster" | "kontor",
     ) => {
@@ -445,74 +473,104 @@ export default function PrislistaClient() {
             {/* Quick Navigation Filter */}
             <section className="sticky top-20 z-30 bg-white/95 dark:bg-[#0a111a]/95 backdrop-blur-md border-b border-slate-100 dark:border-white/5 py-3.5">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6">
-                    <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 scroll-smooth [-webkit-overflow-scrolling:touch]">
-                        <button
-                            onClick={() => handleSelectCategory("all")}
-                            className={`px-4 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap shrink-0 ${
-                                activeCategory === "all"
-                                    ? "bg-[#1e3a5f] text-white dark:bg-[#f59e0b] dark:text-[#1e3a5f] shadow-sm"
-                                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-white/5"
-                            }`}
+                    <div className="relative">
+                        {navScroll.left && (
+                            <div className="absolute left-0 top-0 bottom-0 z-10 flex items-center pr-6 bg-gradient-to-r from-white via-white/90 to-transparent dark:from-[#0a111a] dark:via-[#0a111a]/90 pointer-events-none">
+                                <button
+                                    type="button"
+                                    onClick={() => scrollNav(-1)}
+                                    aria-label="Visa föregående kategorier"
+                                    className="pointer-events-auto w-8 h-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 shadow-sm flex items-center justify-center text-[#1e3a5f] dark:text-white"
+                                >
+                                    <ChevronLeft size={16} />
+                                </button>
+                            </div>
+                        )}
+                        {navScroll.right && (
+                            <div className="absolute right-0 top-0 bottom-0 z-10 flex items-center justify-end pl-8 bg-gradient-to-l from-white via-white/90 to-transparent dark:from-[#0a111a] dark:via-[#0a111a]/90 pointer-events-none">
+                                <button
+                                    type="button"
+                                    onClick={() => scrollNav(1)}
+                                    aria-label="Visa fler kategorier"
+                                    className="pointer-events-auto w-8 h-8 rounded-full bg-[#1e3a5f] dark:bg-[#f59e0b] shadow-sm flex items-center justify-center text-white dark:text-[#1e3a5f]"
+                                >
+                                    <ChevronRight size={16} />
+                                </button>
+                            </div>
+                        )}
+                        <div
+                            ref={navRef}
+                            onScroll={updateNavScroll}
+                            className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 scroll-smooth [-webkit-overflow-scrolling:touch]"
                         >
-                            Alla priser
-                        </button>
-                        <button
-                            onClick={() => handleSelectCategory("flytt")}
-                            className={`px-4 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap shrink-0 ${
-                                activeCategory === "flytt"
-                                    ? "bg-[#1e3a5f] text-white dark:bg-[#f59e0b] dark:text-[#1e3a5f] shadow-sm"
-                                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-white/5"
-                            }`}
-                        >
-                            Flyttstädning
-                        </button>
-                        <button
-                            onClick={() => handleSelectCategory("hem")}
-                            className={`px-4 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap shrink-0 ${
-                                activeCategory === "hem"
-                                    ? "bg-[#1e3a5f] text-white dark:bg-[#f59e0b] dark:text-[#1e3a5f] shadow-sm"
-                                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-white/5"
-                            }`}
-                        >
-                            Hemstädning
-                        </button>
-                        <button
-                            onClick={() => handleSelectCategory("stor")}
-                            className={`px-4 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap shrink-0 ${
-                                activeCategory === "stor"
-                                    ? "bg-[#1e3a5f] text-white dark:bg-[#f59e0b] dark:text-[#1e3a5f] shadow-sm"
-                                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-white/5"
-                            }`}
-                        >
-                            Storstädning
-                        </button>
-                        <button
-                            onClick={() => handleSelectCategory("fonster")}
-                            className={`px-4 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap shrink-0 ${
-                                activeCategory === "fonster"
-                                    ? "bg-[#1e3a5f] text-white dark:bg-[#f59e0b] dark:text-[#1e3a5f] shadow-sm"
-                                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-white/5"
-                            }`}
-                        >
-                            Fönsterputs
-                        </button>
-                        <button
-                            onClick={() => handleSelectCategory("kontor")}
-                            className={`px-4 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap shrink-0 ${
-                                activeCategory === "kontor"
-                                    ? "bg-[#1e3a5f] text-white dark:bg-[#f59e0b] dark:text-[#1e3a5f] shadow-sm"
-                                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-white/5"
-                            }`}
-                        >
-                            Kontorsstädning
-                        </button>
-                        <a
-                            href="#kalkylator"
-                            className="ml-auto inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-[#f59e0b] bg-amber-500/10 hover:bg-amber-500/20 rounded-xl transition-colors whitespace-nowrap shrink-0"
-                        >
-                            <Calculator size={14} />
-                            <span>Räkna pris i kalkylatorn ↓</span>
-                        </a>
+                            <button
+                                onClick={() => handleSelectCategory("all")}
+                                className={`px-4 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap shrink-0 ${
+                                    activeCategory === "all"
+                                        ? "bg-[#1e3a5f] text-white dark:bg-[#f59e0b] dark:text-[#1e3a5f] shadow-sm"
+                                        : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-white/5"
+                                }`}
+                            >
+                                Alla priser
+                            </button>
+                            <button
+                                onClick={() => handleSelectCategory("flytt")}
+                                className={`px-4 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap shrink-0 ${
+                                    activeCategory === "flytt"
+                                        ? "bg-[#1e3a5f] text-white dark:bg-[#f59e0b] dark:text-[#1e3a5f] shadow-sm"
+                                        : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-white/5"
+                                }`}
+                            >
+                                Flyttstädning
+                            </button>
+                            <button
+                                onClick={() => handleSelectCategory("hem")}
+                                className={`px-4 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap shrink-0 ${
+                                    activeCategory === "hem"
+                                        ? "bg-[#1e3a5f] text-white dark:bg-[#f59e0b] dark:text-[#1e3a5f] shadow-sm"
+                                        : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-white/5"
+                                }`}
+                            >
+                                Hemstädning
+                            </button>
+                            <button
+                                onClick={() => handleSelectCategory("stor")}
+                                className={`px-4 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap shrink-0 ${
+                                    activeCategory === "stor"
+                                        ? "bg-[#1e3a5f] text-white dark:bg-[#f59e0b] dark:text-[#1e3a5f] shadow-sm"
+                                        : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-white/5"
+                                }`}
+                            >
+                                Storstädning
+                            </button>
+                            <button
+                                onClick={() => handleSelectCategory("fonster")}
+                                className={`px-4 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap shrink-0 ${
+                                    activeCategory === "fonster"
+                                        ? "bg-[#1e3a5f] text-white dark:bg-[#f59e0b] dark:text-[#1e3a5f] shadow-sm"
+                                        : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-white/5"
+                                }`}
+                            >
+                                Fönsterputs
+                            </button>
+                            <button
+                                onClick={() => handleSelectCategory("kontor")}
+                                className={`px-4 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap shrink-0 ${
+                                    activeCategory === "kontor"
+                                        ? "bg-[#1e3a5f] text-white dark:bg-[#f59e0b] dark:text-[#1e3a5f] shadow-sm"
+                                        : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-white/5"
+                                }`}
+                            >
+                                Kontorsstädning
+                            </button>
+                            <a
+                                href="#kalkylator"
+                                className="ml-auto inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-[#f59e0b] bg-amber-500/10 hover:bg-amber-500/20 rounded-xl transition-colors whitespace-nowrap shrink-0"
+                            >
+                                <Calculator size={14} />
+                                <span>Räkna pris i kalkylatorn ↓</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1554,8 +1612,7 @@ export default function PrislistaClient() {
                                                     {formatHours(
                                                         hemBilledPersonHours,
                                                     )}{" "}
-                                                    arbetstimmar med {hemFreq}{" "}
-                                                    kr
+                                                    arbetstimmar x {hemFreq} kr
                                                 </span>
                                                 <span className="font-semibold text-slate-900 dark:text-white tabular-nums">
                                                     {hemWorkCost.toLocaleString(
