@@ -484,7 +484,7 @@ export default function HomeClient() {
                         {[
                             {
                                 title: "Veckovis städning",
-                                price: "229 kr/timme",
+                                price: "209 kr/timme",
                                 description:
                                     "För dig som vill ha ett hem som alltid känns nystädat",
                                 features: [
@@ -499,7 +499,7 @@ export default function HomeClient() {
                             },
                             {
                                 title: "Varannan vecka",
-                                price: "249 kr/timme",
+                                price: "229 kr/timme",
                                 description:
                                     "Bästa balansen mellan pris och ett rent hem.",
                                 features: [
@@ -515,7 +515,7 @@ export default function HomeClient() {
                             },
                             {
                                 title: "Var fjärde vecka",
-                                price: "269 kr/timme",
+                                price: "249 kr/timme",
                                 description:
                                     "En regelbunden uppfräschning utan bindningstid.",
                                 features: [

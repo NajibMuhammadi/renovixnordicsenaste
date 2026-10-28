@@ -137,22 +137,22 @@ const flyttAddons = [
 const hemstadningFrequencies = [
     {
         frequency: "Varje vecka",
-        pricePerHour: "229 kr/timme",
-        rateNum: 229,
+        pricePerHour: "209 kr/timme",
+        rateNum: 209,
         badge: "Populärast",
         desc: "För dig som vill ha ett ständigt välstädat och skinande hem.",
     },
     {
         frequency: "Varannan vecka",
-        pricePerHour: "249 kr/timme",
-        rateNum: 249,
+        pricePerHour: "229 kr/timme",
+        rateNum: 229,
         badge: "Mest vald",
         desc: "Vårt mest populära upplägg. Perfekt balans för de flesta hem.",
     },
     {
         frequency: "Varje månad",
-        pricePerHour: "269 kr/timme",
-        rateNum: 269,
+        pricePerHour: "249 kr/timme",
+        rateNum: 249,
         badge: "Månadsvård",
         desc: "En genomgående grundstädning en gång i månaden.",
     },
@@ -250,6 +250,18 @@ const kontorsstadningPrices = [
     },
 ];
 
+/**
+ * Hemstädning räknas per PERSONTIMME (totalt antal arbetstimmar).
+ * Kunden anger totalt antal arbetstimmar – vi bestämmer själva hur många
+ * städare som utför jobbet. Pris = timmar × timpris (efter RUT) + framkörning.
+ * Exempel: 2 städare × 2,5 h = 5 timmar × 229 kr = 1 145 kr (+ framkörning).
+ */
+const HEM_TRAVEL_FEE = 79;
+const HEM_MIN_PERSON_HOURS = 2;
+const HEM_MAX_PERSON_HOURS = 16;
+
+const formatHours = (value: number) => String(value).replace(".", ",");
+
 export default function PrislistaClient() {
     const [activeCategory, setActiveCategory] = useState<
         "all" | "flytt" | "hem" | "stor" | "fonster" | "kontor"
@@ -298,8 +310,8 @@ export default function PrislistaClient() {
     const [selectedAddons, setSelectedAddons] = useState<string[]>([
         "materialTransport",
     ]);
-    const [hemHours, setHemHours] = useState<number>(3);
-    const [hemFreq, setHemFreq] = useState<number>(249);
+    const [hemHours, setHemHours] = useState<number>(5); // totalt antal arbetstimmar (persontimmar)
+    const [hemFreq, setHemFreq] = useState<number>(229);
     const [fonsterChoice, setFonsterChoice] = useState<number>(699);
 
     const flyttInputId = useId();
@@ -351,10 +363,12 @@ export default function PrislistaClient() {
         return flyttCurrentTier.regular + addonCost;
     };
 
-    const calculateHemEstimate = () => {
-        const hours = Math.max(2, hemHours);
-        return hours * hemFreq + 79;
-    };
+    // Hemstädning: kunden anger totalt antal arbetstimmar
+    const hemPersonHours = hemHours;
+    const hemBilledPersonHours = Math.max(HEM_MIN_PERSON_HOURS, hemPersonHours);
+    const hemWorkCost = hemBilledPersonHours * hemFreq;
+
+    const calculateHemEstimate = () => hemWorkCost + HEM_TRAVEL_FEE;
 
     const calculateStorEstimate = () => {
         if (calcM2 <= 50) return 2498;
@@ -1293,18 +1307,18 @@ export default function PrislistaClient() {
                                                     htmlFor={hemHoursId}
                                                     className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400"
                                                 >
-                                                    3. Antal timmar per
-                                                    städtillfälle
+                                                    3. Antal arbetstimmar totalt
                                                 </label>
                                                 <span className="text-base font-bold text-[#1e3a5f] dark:text-white tabular-nums">
-                                                    {hemHours} timmar
+                                                    {formatHours(hemHours)}{" "}
+                                                    timmar
                                                 </span>
                                             </div>
                                             <input
                                                 id={hemHoursId}
                                                 type="range"
-                                                min="2"
-                                                max="8"
+                                                min={HEM_MIN_PERSON_HOURS}
+                                                max={HEM_MAX_PERSON_HOURS}
                                                 step="0.5"
                                                 value={hemHours}
                                                 onChange={(e) =>
@@ -1315,10 +1329,32 @@ export default function PrislistaClient() {
                                                 className="w-full accent-[#1e3a5f] dark:accent-[#f59e0b] h-2 bg-slate-200 dark:bg-slate-700 rounded-lg cursor-pointer"
                                             />
                                             <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-2">
-                                                Minsta bokning är 2 timmar per
-                                                tillfälle. Fast framkörning inom
-                                                Gävle (79 kr).
+                                                Minsta bokning är 2 timmar. Fast
+                                                framkörning inom Gävle (79 kr).
                                             </div>
+                                        </div>
+
+                                        <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[#1e3a5f] dark:text-slate-200 flex items-start gap-3 text-xs">
+                                            <Info className="text-[#f59e0b] w-4 h-4 shrink-0 mt-0.5" />
+                                            <span>
+                                                <strong>
+                                                    Så fungerar arbetstiden
+                                                </strong>{" "}
+                                                Du betalar för den totala
+                                                arbetstiden, oavsett hur många
+                                                städare som kommer. Vi anpassar
+                                                bemanningen efter bostadens
+                                                storlek och uppdragets
+                                                omfattning. Exempel: Två städare
+                                                som arbetar 2,5 timmar var
+                                                motsvarar totalt 5 arbetstimmar.
+                                                Priset blir 5 × {hemFreq} kr ={" "}
+                                                {(5 * hemFreq).toLocaleString(
+                                                    "sv-SE",
+                                                )}{" "}
+                                                kr efter RUT, exklusive
+                                                framkörning.
+                                            </span>
                                         </div>
                                     </>
                                 )}
@@ -1500,15 +1536,29 @@ export default function PrislistaClient() {
 
                                     {calcService === "hem" && (
                                         <>
+                                            {hemPersonHours <
+                                                HEM_MIN_PERSON_HOURS && (
+                                                <div className="flex justify-between items-center text-slate-500 dark:text-slate-400 text-[11px]">
+                                                    <span>
+                                                        Debiteras som minsta
+                                                        bokning
+                                                    </span>
+                                                    <span className="tabular-nums">
+                                                        {HEM_MIN_PERSON_HOURS}{" "}
+                                                        timmar
+                                                    </span>
+                                                </div>
+                                            )}
                                             <div className="flex justify-between items-center text-slate-600 dark:text-slate-300">
                                                 <span>
-                                                    {hemHours} timmar à{" "}
-                                                    {hemFreq} kr/tim
+                                                    {formatHours(
+                                                        hemBilledPersonHours,
+                                                    )}{" "}
+                                                    arbetstimmar med {hemFreq}{" "}
+                                                    kr
                                                 </span>
                                                 <span className="font-semibold text-slate-900 dark:text-white tabular-nums">
-                                                    {(
-                                                        hemHours * hemFreq
-                                                    ).toLocaleString(
+                                                    {hemWorkCost.toLocaleString(
                                                         "sv-SE",
                                                     )}{" "}
                                                     kr
@@ -1517,7 +1567,7 @@ export default function PrislistaClient() {
                                             <div className="flex justify-between items-center text-slate-500 dark:text-slate-400 text-[11px]">
                                                 <span>Framkörning Gävle</span>
                                                 <span className="tabular-nums">
-                                                    79 kr
+                                                    {HEM_TRAVEL_FEE} kr
                                                 </span>
                                             </div>
                                         </>
@@ -1615,7 +1665,11 @@ export default function PrislistaClient() {
                                             <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-1">
                                                 Per städtillfälle efter
                                                 RUT-avdrag inklusive
-                                                framkörning.
+                                                framkörning. Du betalar för{" "}
+                                                {formatHours(
+                                                    hemBilledPersonHours,
+                                                )}{" "}
+                                                arbetstimmar.
                                             </p>
                                         </div>
                                     )}
