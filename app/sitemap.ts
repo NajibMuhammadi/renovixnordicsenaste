@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { portfolioItems, services } from "@/lib/data";
 
-const LAST_MODIFIED = new Date("2026-10-27");
+const LAST_MODIFIED = new Date("2026-10-30");
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://renovixnordic.se";

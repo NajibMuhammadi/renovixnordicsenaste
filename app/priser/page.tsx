@@ -23,11 +23,11 @@ export const metadata: Metadata = {
         title: "Prislista Städtjänster i Gävleborg | Renovix Nordic",
         description:
             "Tydliga och transparenta priser för flyttstädning, hemstädning, storstädning och fönsterputs. 50% RUT-avdrag och 100% städgaranti.",
-        url: "https://renovixnordic.se/prislista",
+        url: "https://renovixnordic.se/pris",
         type: "website",
     },
     alternates: {
-        canonical: "https://renovixnordic.se/prislista",
+        canonical: "https://renovixnordic.se/pris",
     },
 };
 
