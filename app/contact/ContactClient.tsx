@@ -20,6 +20,12 @@ import Image from "next/image";
 import { services } from "@/lib/data";
 import Logo from "@/components/Logo";
 
+declare global {
+    interface Window {
+        gtag?: (...args: any[]) => void;
+    }
+}
+
 const inputBase =
     "w-full bg-slate-50/50 hover:bg-slate-50/80 focus:bg-white dark:bg-slate-950/40 dark:hover:bg-slate-950/80 rounded-xl px-4 py-3.5 text-slate-800 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none transition-all duration-300 text-sm font-medium border";
 const inputOk =
@@ -278,6 +284,19 @@ export default function ContactPage() {
                 );
 
             setStatus("success");
+
+            // Google Ads-konvertering: körs bara när API:et svarat OK
+            if (
+                typeof window !== "undefined" &&
+                typeof window.gtag === "function"
+            ) {
+                window.gtag("event", "conversion", {
+                    send_to: "AW-18137050699/ezP9CJC8iLkdEMvctchD",
+                    value: 100.0,
+                    currency: "SEK",
+                });
+            }
+
             setSelectedImages([]);
             setFormState({
                 companyName: "",
